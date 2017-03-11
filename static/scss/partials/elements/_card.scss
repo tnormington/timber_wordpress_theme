@@ -1,0 +1,13 @@
+.card {
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba($black, 0.15);
+}
+
+.card-hover {
+    transition: all 0.25s $ease-out-back;
+    &:hover {
+        box-shadow: 0 0px 16px rgba($black, 0.25);
+    }
+}
+

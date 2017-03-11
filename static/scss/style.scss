@@ -1,6 +1,11 @@
 @import "normalize";
 
+
+// 3rd party includes
 @import "include-media";
+@import "font-awesome";
+
+
 
 @import "variables";
 @import "mixins";
@@ -10,3 +15,5 @@
 @import "project";
 @import "footer";
 @import "utility";
+@import "elements";
+@import "post";

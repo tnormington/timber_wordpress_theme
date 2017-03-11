@@ -10,6 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: $offwhite;
 }
 
 
@@ -23,7 +24,7 @@ section.content-wrapper {
     flex: 1 0 auto;
     max-width: 900px;
     margin: 0 auto;
-    @include media("<phone") {
+    @include media("<=phone") {
         padding: 0 1em;
     }
 }
@@ -33,7 +34,8 @@ section.content-wrapper {
     h1,h2,h3,h4,h5,h6 {
         color: $dark_teal;
     }
-    p {
+    p,
+    a {
         line-height: 1.6;
     }
     a {
