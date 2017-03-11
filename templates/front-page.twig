@@ -1,0 +1,15 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+    {{post.content}}
+
+
+    {% for post in posts %}
+
+        <a href="{{ post.link }}">{{ post.post_title }}</a>
+        <img src="{{ post.thumbnail.src}}">
+
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,61 @@
+.header {
+    background-color: $light_blue;
+    position: fixed;
+    z-index: 10;
+    flex: 0;
+    width: 100%;
+    .wrapper {
+        min-height: 177px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 10;
+    }
+    .header-svg {
+        z-index: 1;
+        position: absolute;
+    }
+}
+
+.hdr-logo {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.hdr-logo-link {
+    display: inline-block;
+    font-family: 'Monoton', display;
+    font-size: 2.25em;
+    color: $dark_teal;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    span {
+        transition: all 0.5s ease-out;
+        display: block;
+        position: relative;
+        &.flip {
+            color: $maroon;
+            transform: rotateY(180deg);
+        }
+    }
+}
+
+
+.header-svg {
+    .l-top,
+    .r-top {
+        fill: $maroon;
+    }
+    .l-mid,
+    .r-mid {
+        fill: $tan;
+    }
+    .l-bot,
+    .r-bot {
+        fill: $teal;
+    }
+}

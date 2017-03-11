@@ -1,0 +1,18 @@
+{% extends "tease.twig" %}
+
+{% block content %}
+    <img class="project__featured-image" src="{{post.thumbnail.src}}" />
+    <div class="project__details">
+        <h2 class="project__title"><a class="project__title__link" href="{{post.link}}">{{post.title}}</a></h2>
+        <div name="project__categories">
+            {% for category in post.terms('project_categories') %}
+                <span class="project__category">{{category.name}}</span>
+            {% endfor %}
+        </div>
+        <ul>
+            {% for keyword in post.terms('project_keywords') %}
+                <li class="keyword">{{keyword}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,9 @@
+.tease-project {
+    display: flex;
+    align-items: flex-start;
+}
+
+.project__featured-image {
+    flex-basis: 50%;
+    max-width: 50%;
+}

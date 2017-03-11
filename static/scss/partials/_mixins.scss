@@ -1,0 +1,6 @@
+@mixin smartMargin($direction, $amount) {
+    margin-#{$direction}: $amount;
+    &:last-child {
+        margin-#{$direction}: 0;
+    }
+}

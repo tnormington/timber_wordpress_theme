@@ -1,0 +1,65 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+img {
+    max-width: 100%;
+}
+
+section.content-wrapper {
+    padding: 177px 2em 0;
+    flex: 1 0 auto;
+    max-width: 900px;
+    margin: 0 auto;
+    @include media("<phone") {
+        padding: 0 1em;
+    }
+}
+
+// Content element styles
+.content-wrapper {
+    h1,h2,h3,h4,h5,h6 {
+        color: $dark_teal;
+    }
+    p {
+        line-height: 1.6;
+    }
+    a {
+        color: $teal;
+        text-decoration: none;
+        font-weight: bold;
+        position: relative;
+        transition: color 0.25s ease-out;
+        &:after {
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: $teal;
+            content: '';
+            display: block;
+            transition: all 0.25s $ease-out-back;
+            transform: translateX(-50%);
+            left: 50%;
+        }
+        &:hover {
+            color: $red;
+            &:after {
+                background-color: $red;
+                width: 100%;
+            }
+        }
+    }
+} 
+
