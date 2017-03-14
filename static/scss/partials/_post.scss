@@ -1,30 +1,44 @@
 .post-teaser {
-    padding: 2em;
-    @include smart-margin(bottom, 1em);
     .post__header {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 0.5em;
     }
-    @include media("<=phone") {
-        padding: 1em;
+    .post__category {
+        margin-bottom: 0;
+        @include media("<=450px") {
+            font-size: 0.8em;
+        }
+    }
+    .post__categories {
+        @include media("<=450px") {
+            margin-bottom: 0.5em;
+        }
     }
 }
 
 
 .post__date {
-    display: inline-flex;
-    align-items: center;
     margin-left: 1em;
     flex-shrink: 0;
-    i {
-        margin-right: 0.5em;
-        margin-bottom: 1px;
-        color: $red;
+    color: $pink;
+    @include media("<=450px") {
+        display: none;
     }
     @include media("<=phone") {
         font-size: 0.8em;
-        i {
-            margin-bottom: 0;
-        }
+    }
+}
+
+.post__date-mobile {
+    color: $pink;
+    display: none;
+    &:before {
+        @include pseudo-icon(35px);
+        margin-right: 0.5em;
+        background-image: url('../images/svg/calendar.svg');
+    }
+    @include media("<=450px") {
+        display: inline-flex;
     }
 }

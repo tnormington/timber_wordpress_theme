@@ -11,7 +11,7 @@ $context['projects'] = Timber::get_posts($project_args);
 
 $post_args = array(
     'post_type' => 'post',
-    'post_count' => 3,
+    'posts_per_page' => 3,
 );
 
 $context['posts'] = Timber::get_posts($post_args);

@@ -19,10 +19,7 @@
             </div>
         {% endif %}
 
-        <div>
-            <label for="comment"> comment </label>
-            <textarea placeholder="comment text" name="comment" cols="60" rows="3" id="comment"></textarea>
-        </div>
+        <textarea placeholder="comment text" name="comment" rows="3" id="comment"></textarea>
 
         <input name="comment_post_ID" value="{{ post.id }}" id="comment_post_ID" type="hidden">
         <input name="comment_parent" id="comment_parent" value="{{ comment.ID|default('0') }}" type="hidden">

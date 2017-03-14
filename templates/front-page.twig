@@ -1,23 +1,11 @@
 {% extends "base.twig" %}
 
 {% block content %}
-
+    <h1 class="page-title">{{post.title}}</h1>
     {{post.content}}
-
-
+    <div class="hr hr-teal"></div>
     {% for post in posts %}
-
-    <div class="post-teaser card card-hover">
-        <div class="post__header">
-            <a class="post__title" href="{{ post.link }}">{{ post.post_title }}</a>
-            <span class="post__date">
-                <i class="fa fa-calendar"></i>
-                {{ post.post_date|date("M d, Y") }}
-            </span>
-        </div>
-        <div class="hr hr-teal"></div>
-        <p>{{ post.content|length > 250 ? post.content|striptags|slice(0, 250) ~ '...' : post.content  }}</p>
-    </div>
+        {% include 'tease-post.twig' %}
     {% endfor %}
 
 {% endblock %}

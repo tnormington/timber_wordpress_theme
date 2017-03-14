@@ -1,9 +1,16 @@
 {% extends "tease.twig" %}
 
 {% block content %}
-	<h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2>
-		<p>{{post.get_preview(25)}}</p>
-		{% if post.thumbnail.src %}
-			<img src="{{post.thumbnail.src}}" />
-		{% endif %}
+	<div class="post__header">
+		<a class="post__title" href="{{ post.link }}">{{ post.post_title }}</a>
+		<span class="date date-right post__date">{{ post.post_date|date("M d, Y") }}</span>
+	</div>
+	<div class="post__categories">
+		{% for category in post.terms('category') %}
+			{% include 'category.twig' %}
+		{% endfor %}
+	</div>
+	<span class="date post__date-mobile">{{ post.post_date|date("M d, Y") }}</span>
+	<div class="hr hr-light-blue"></div>
+	<p>{{ post.content|length > 250 ? post.content|striptags|slice(0, 250) ~ '...' : post.content  }}</p>
 {% endblock %}

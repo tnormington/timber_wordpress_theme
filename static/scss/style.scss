@@ -3,17 +3,18 @@
 
 // 3rd party includes
 @import "include-media";
-@import "font-awesome";
+// @import "font-awesome";
 
 
 
 @import "variables";
 @import "mixins";
 @import "base";
+@import "elements";
 @import "header";
 @import "nav_main";
 @import "project";
 @import "footer";
 @import "utility";
-@import "elements";
 @import "post";
+@import "form";

@@ -1,0 +1,26 @@
+
+form {
+    textarea,
+    input[type="text"],
+    input[type="email"] {
+        width: 100%;
+        padding: 0.5em;
+        border-radius: 5px;
+        border: 1px solid $gray;
+        margin-bottom: 1em;
+        transition: all 0.15s ease-out;
+        &:focus {
+            box-shadow: 0 0 6px rgba($teal, 0.55);
+        }
+    }
+
+    button {
+        font-family: 'Quicksand', sans-serif;
+        text-transform: uppercase;
+        @include cta($teal);
+    }
+
+    button[type="reset"] {
+        @include cta($maroon);
+    }
+}

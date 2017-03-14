@@ -50,5 +50,9 @@ $labels = array(
 		'show_in_rest'          => true,
 		'rest_base'             => 'projects',
 		'rest_controller_class' => 'WP_REST_Posts_Controller',
+		'rewrite'               => array(
+			'slug'                  => 'projects',
+			'with_front'            => false,
+		),
 	);
 	register_post_type( 'project', $args );

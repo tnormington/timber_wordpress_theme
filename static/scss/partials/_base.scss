@@ -1,3 +1,5 @@
+// Globals
+
 *, *:before, *:after {
     box-sizing: border-box;
 }
@@ -6,28 +8,55 @@ html {
     font-family: 'Quicksand', sans-serif;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+:focus {
+    outline: $red;
+}
+
+// Layout
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: $offwhite;
+    background-color: $light_blue;
 }
 
-
-
-img {
-    max-width: 100%;
-}
 
 section.content-wrapper {
-    padding: 177px 2em 0;
+    padding: 177px 2em 2em;
     flex: 1 0 auto;
     max-width: 900px;
+    width: 100%;
     margin: 0 auto;
+    @include media("<=700px") {
+        padding-top: 202px;
+    }
     @include media("<=phone") {
-        padding: 0 1em;
+        padding: 202px 1em 0;
     }
 }
+
+.wrapper.title-projects {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    > article {
+        flex-basis: 49%;
+    }
+    @include media("<=700px") {
+        > article {
+            flex-basis: 100%;
+        }
+    }
+}
+
+
 
 // Content element styles
 .content-wrapper {
@@ -55,13 +84,26 @@ section.content-wrapper {
             transform: translateX(-50%);
             left: 50%;
         }
-        &:hover {
+        &:hover,
+        &:focus,
+        &:hover:focus {
             color: $red;
             &:after {
                 background-color: $red;
                 width: 100%;
             }
         }
+    }
+    pre {
+        font-size: 0.85em;
+        padding: 1em;
+        background-color: $white;
+        border: 1px solid $gray;
+        border-radius: 5px;
+        overflow-y: scroll;
+    }
+    article:not('.teaser') img {
+        box-shadow: 0 2px 5px rgba($black, 0.35);
     }
 } 
 

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="183px" height="183px" viewBox="0 0 183 183" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>calendar</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="calendar">
+            <g id="Group-3" transform="translate(9.000000, 4.000000)">
+                <path d="M10,165 L156,165 L156,10 L10,10 L10,165 Z M0,0 L166,0 L166,175 L0,175 L0,0 Z" id="Rectangle-2" fill="#184155" fill-rule="nonzero"></path>
+                <rect id="Rectangle-Copy" fill="#2F888E" x="52" y="59" width="28" height="28"></rect>
+                <rect id="Rectangle-Copy-2" fill="#2F888E" x="86" y="59" width="28" height="28"></rect>
+                <rect id="Rectangle-Copy-3" fill="#2F888E" x="120" y="59" width="28" height="28"></rect>
+                <g id="Group-Copy" transform="translate(18.000000, 94.000000)" fill="#2F888E">
+                    <rect id="Rectangle" x="0" y="0" width="28" height="28"></rect>
+                    <rect id="Rectangle-Copy" x="34" y="0" width="28" height="28"></rect>
+                    <rect id="Rectangle-Copy-2" x="68" y="0" width="28" height="28"></rect>
+                    <rect id="Rectangle-Copy-3" x="102" y="0" width="28" height="28"></rect>
+                </g>
+                <g id="Group-Copy-2" transform="translate(18.000000, 129.000000)" fill="#2F888E">
+                    <rect id="Rectangle" x="0" y="0" width="28" height="28"></rect>
+                    <rect id="Rectangle-Copy" x="34" y="0" width="28" height="28"></rect>
+                    <rect id="Rectangle-Copy-2" x="68" y="0" width="28" height="28"></rect>
+                    <rect id="Rectangle-Copy-3" x="102" y="0" width="28" height="28"></rect>
+                </g>
+                <circle id="Oval-3" fill="#FB7994" cx="140.5" cy="28.5" r="7.5"></circle>
+                <circle id="Oval-3-Copy" fill="#FB7994" cx="25.5" cy="28.5" r="7.5"></circle>
+                <g id="Group-2" transform="translate(5.000000, 47.000000)" fill="#184155">
+                    <rect id="Rectangle-3" x="0" y="0" width="13" height="3"></rect>
+                    <rect id="Rectangle-3-Copy" x="18" y="0" width="13" height="3"></rect>
+                    <rect id="Rectangle-3-Copy-2" x="36" y="0" width="13" height="3"></rect>
+                    <rect id="Rectangle-3-Copy-3" x="54" y="0" width="13" height="3"></rect>
+                    <rect id="Rectangle-3-Copy-4" x="72" y="0" width="13" height="3"></rect>
+                    <rect id="Rectangle-3-Copy-5" x="90" y="0" width="13" height="3"></rect>
+                    <rect id="Rectangle-3-Copy-6" x="108" y="0" width="13" height="3"></rect>
+                    <rect id="Rectangle-3-Copy-7" x="126" y="0" width="13" height="3"></rect>
+                    <rect id="Rectangle-3-Copy-8" x="144" y="0" width="13" height="3"></rect>
+                </g>
+                <g id="Group" transform="translate(52.000000, 59.000000)"></g>
+            </g>
+        </g>
+    </g>
+</svg>

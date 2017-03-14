@@ -1,0 +1,40 @@
+.category {
+    margin-bottom: 1em;
+    margin-right: 1em;
+    display: inline-flex;
+    align-items: center;
+    &:before {
+        @include pseudo-icon(35px);
+        margin-right: 0.5em;
+    }
+    &.developed {
+        &:before {
+            background-image: url('../images/svg/coding.svg');
+        }
+    }
+    &.designed {
+        &:before {
+            background-image: url('../images/svg/designed.svg');
+        }
+    }
+    &.thoughts {
+        &:before {
+            background-image: url('../images/svg/thoughts.svg');
+        }
+    }
+    &.coding {
+        &:before {
+            background-image: url('../images/svg/coding.svg');
+        }
+    }
+    &.about {
+        &:before {
+            background-image: url('../images/svg/about me.svg');
+        }
+    }
+    &.design {
+        &:before {
+            background-image: url('../images/svg/designed.svg');
+        }
+    }
+}

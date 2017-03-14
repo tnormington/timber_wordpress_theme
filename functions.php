@@ -23,18 +23,34 @@ class StarterSite extends TimberSite {
 		add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 		add_filter( 'timber_context', array( $this, 'add_to_context' ) );
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
+		// add_filter( 'nav_menu_css_class', array( $this, 'fix_blog_menu_css_class', 10, 2 ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_resources' ) );
 		parent::__construct();
 	}
 
+	function fix_blog_menu_css_class( $classes, $item ) {
+		if ( is_singular( 'project' ) || is_post_type_archive( 'project' ) ) {
+			if ( $item->object_id == get_option('page_for_posts') ) {
+				$key = array_search( 'current_page_parent', $classes );
+				if ( false !== $key )
+					unset( $classes[ $key ] );
+			}
+		}
+
+		return $classes;
+	}
+
+	
+
+
 	function enqueue_resources() {
 		// Styles
 		wp_enqueue_style( 'site-style', get_template_directory_uri().'/assets/css/style.css' );
 		// Scripts
-		wp_enqueue_script( 'lettering', get_template_directory_uri().'/bower_components/letteringjs/jquery.lettering.js', array('jquery'));
-		wp_enqueue_script( 'site-js', get_template_directory_uri().'/assets/js/script.js', array('jquery', 'lettering'));
+		// wp_enqueue_script( 'lettering', get_template_directory_uri().'/bower_components/letteringjs/jquery.lettering.js', array('jquery'));
+		wp_enqueue_script( 'site-js', get_template_directory_uri().'/assets/js/script.js', array('jquery'));
 	}
 
 	function register_post_types() {

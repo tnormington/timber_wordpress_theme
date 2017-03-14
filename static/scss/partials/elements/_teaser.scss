@@ -1,0 +1,10 @@
+.teaser {
+    padding: 2em;
+    p {
+        margin-bottom: 0;
+    }
+    @include smart-margin(bottom, 1em);
+    @include media ("<=phone") {
+        padding: 1em;
+    }
+}

@@ -1,51 +1,70 @@
 .header {
-    background-color: $light_blue;
+    background-color: transparent;
     position: fixed;
     z-index: 10;
     flex: 0;
     width: 100%;
     .wrapper {
-        min-height: 177px;
+        // min-height: 177px;
+        margin-top: 2em;
         display: flex;
         justify-content: center;
         align-items: flex-end;
         flex-wrap: wrap;
-        position: relative;
+        // position: relative;
         z-index: 10;
+        @include media("<=700px") {
+            margin-top: 4em;
+        }
     }
-    .header-svg {
+    .header-svg,
+    .header-svg-mobile {
         z-index: 1;
         position: absolute;
+        pointer-events: none;
     }
 }
 
 .hdr-logo {
     flex-basis: 100%;
     text-align: center;
+    z-index: 15;
+    position: relative;
 }
 
 .hdr-logo-link {
-    display: inline-block;
+    z-index: 10;
     font-family: 'Monoton', display;
-    font-size: 2.25em;
-    color: $dark_teal;
+    color: $light_blue;
     text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    span {
-        transition: all 0.5s ease-out;
-        display: block;
-        position: relative;
-        &.flip {
-            color: $maroon;
-            transform: rotateY(180deg);
+    display: inline-block;
+    font-size: 4.5em;
+    transition: all 0.75s $ease-out-back;
+    position: relative;
+    background-color: $dark_teal;
+    padding: 0.095em 0.15em 0.05em;
+    box-shadow: 0 2px 6px rgba($black, 0.35);
+    &:focus,
+    &:active {
+        color: $dark_teal;
+        background-color: $light_blue;
+        transform: rotateY(1turn);
+    }
+    @include media("<=700px") {
+        background-color: $white;
+        color: $dark_teal;
+        &:focus,
+        &:active {
+            color: $light_blue;
+            background-color: $dark_teal;
+            transform: rotateY(-1turn);
         }
     }
 }
 
 
-.header-svg {
+.header-svg,
+.header-svg-mobile {
     .l-top,
     .r-top {
         fill: $maroon;
@@ -57,5 +76,19 @@
     .l-bot,
     .r-bot {
         fill: $teal;
+    }
+    @include media("<=700px") {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+.header-svg-mobile {
+    right: 0;
+    display: none;
+    visibility: hidden;
+    @include media("<=700px") {
+        display: block;
+        visibility: visible;
     }
 }

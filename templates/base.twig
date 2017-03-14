@@ -8,10 +8,17 @@
 {% endblock %}
 
 	<body class="{{body_class}}" data-template="base.twig">
+		{% include 'svg-icons.twig' %}
 		<header class="header" >
+			{% include 'header-svg-mobile.twig' %}
 			{% include 'header-svg.twig' %}
 			{% block header %}
 				<div class="wrapper">
+					<button class="mobile-menu-toggle" id="mobile-menu-toggle">
+						<span class="menu-toggle-bar top"></span>
+						<span class="menu-toggle-bar mid"></span>
+						<span class="menu-toggle-bar bot"></span>
+					</button>
 					<div class="hdr-logo" role="banner">
 						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
 					</div>
@@ -23,8 +30,8 @@
 		</header>
 
 		<section id="content" role="main" class="content-wrapper">
-			{% if title %}<h1>{{title}}</h1>{% endif %}
-			<div class="wrapper {{sidebar_class}}">
+			{% if title %}<h1 class="page-title">{{title}}</h1>{% endif %}
+			<div class="wrapper title-{{wp_title|lower}}">
 				{% block content %}
 					Sorry, no content
 				{% endblock %}
