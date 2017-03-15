@@ -94,6 +94,14 @@ section.content-wrapper {
                 width: 100%;
             }
         }
+        &.no-hover {
+            &:after {
+                display: none;
+            }
+            &:hover {
+                // color: initial;
+            }
+        }
     }
     pre {
         font-size: 0.85em;
