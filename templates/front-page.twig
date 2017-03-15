@@ -3,9 +3,10 @@
 {% block content %}
     <h1 class="page-title">{{post.title}}</h1>
     {{post.content}}
-    <div class="hr hr-teal"></div>
     {% for post in posts %}
         {% include 'tease-post.twig' %}
     {% endfor %}
+
+    <a class="view-all-link front-page__view-all-link" href="/blog">All Blog Posts</a>
 
 {% endblock %}

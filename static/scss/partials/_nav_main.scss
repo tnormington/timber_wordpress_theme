@@ -44,7 +44,9 @@
                 transition: all 0.25s $ease-out-back;
                 z-index: -1;
             }
-            &:hover {
+            &:hover,
+            &:focus,
+            &:hover:focus {
                 color: $light_blue;
                 &:before {
                     height: 100%;
@@ -108,7 +110,9 @@
                 }
                 &:hover,
                 &:active,
-                &:hover:active {
+                &:hover:active,
+                &:focus,
+                &:hover:focus {
                     &:before {
                         width: 100%;
                     }
@@ -144,8 +148,14 @@
         }
         @include smart-margin(bottom, 4px);
     }
+    &:focus {
+        outline: 2px solid $teal;
+    }
     &.active {
         padding-top: calc(1em + 2px);
+        &:focus {
+            outline: none;
+        }
         .menu-toggle-bar {
             background-color: $maroon;
             // box-shadow: none;

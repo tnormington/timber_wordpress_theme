@@ -44,10 +44,12 @@
     background-color: $dark_teal;
     padding: 0.095em 0.15em 0.05em;
     box-shadow: 0 2px 6px rgba($black, 0.35);
+    text-shadow: -3px 0 0 rgba($teal, 1);
     &:focus,
     &:active {
         color: $dark_teal;
         background-color: $light_blue;
+        text-shadow: -3px 0 0 rgba($pink, 1);
         transform: rotateY(1turn);
     }
     @include media("<=700px") {

@@ -24,6 +24,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-color: $light_blue;
+    background-image: linear-gradient(to top, darken($light_blue, 10), $light_blue);
 }
 
 
@@ -37,7 +38,7 @@ section.content-wrapper {
         padding-top: 202px;
     }
     @include media("<=phone") {
-        padding: 202px 1em 0;
+        padding: 202px 1em 2em;
     }
 }
 

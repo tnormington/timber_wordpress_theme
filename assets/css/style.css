@@ -419,7 +419,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #DAE4E8; }
+  background-color: #DAE4E8;
+  background-image: linear-gradient(to top, #bbcdd4, #DAE4E8); }
 
 section.content-wrapper {
   padding: 177px 2em 2em;
@@ -432,7 +433,7 @@ section.content-wrapper {
       padding-top: 202px; } }
   @media (max-width: 320px) {
     section.content-wrapper {
-      padding: 202px 1em 0; } }
+      padding: 202px 1em 2em; } }
 
 .wrapper.title-projects {
   display: flex;
@@ -548,27 +549,8 @@ section.content-wrapper {
 .date {
   display: inline-flex;
   align-items: center;
-  font-size: 0.8em; }
-  .date:before {
-    content: '';
-    width: 35px;
-    height: 35px;
-    display: block;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-right: 0.5em;
-    background-image: url("../images/svg/calendar.svg"); }
-  .date.date-right:before {
-    display: none; }
-  .date.date-right:after {
-    content: '';
-    width: 35px;
-    height: 35px;
-    display: block;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-left: 0.5em;
-    background-image: url("../images/svg/calendar.svg"); }
+  font-size: 0.8em;
+  color: #FB7994; }
 
 .page-title {
   text-align: center;
@@ -624,10 +606,12 @@ section.content-wrapper {
   position: relative;
   background-color: #184155;
   padding: 0.095em 0.15em 0.05em;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35); }
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  text-shadow: -3px 0 0 #2f888e; }
   .hdr-logo-link:focus, .hdr-logo-link:active {
     color: #184155;
     background-color: #DAE4E8;
+    text-shadow: -3px 0 0 #fb7994;
     transform: rotateY(1turn); }
   @media (max-width: 700px) {
     .hdr-logo-link {
@@ -709,9 +693,9 @@ section.content-wrapper {
         position: absolute;
         transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         z-index: -1; }
-      .nav-main ul a:hover {
+      .nav-main ul a:hover, .nav-main ul a:focus, .nav-main ul a:hover:focus {
         color: #DAE4E8; }
-        .nav-main ul a:hover:before {
+        .nav-main ul a:hover:before, .nav-main ul a:focus:before, .nav-main ul a:hover:focus:before {
           height: 100%; }
   @media (max-width: 400px) {
     .nav-main {
@@ -759,7 +743,7 @@ section.content-wrapper {
           transition: all 0.45s cubic-bezier(0.19, 1, 0.22, 1);
           left: 50%;
           transform: translateX(-50%); }
-        .nav-main ul a:hover:before, .nav-main ul a:active:before, .nav-main ul a:hover:active:before {
+        .nav-main ul a:hover:before, .nav-main ul a:active:before, .nav-main ul a:hover:active:before, .nav-main ul a:focus:before, .nav-main ul a:hover:focus:before {
           width: 100%; } }
 
 .mobile-menu-toggle {
@@ -787,8 +771,12 @@ section.content-wrapper {
       margin-left: auto; }
     .mobile-menu-toggle .menu-toggle-bar:last-of-type {
       margin-bottom: 0; }
+  .mobile-menu-toggle:focus {
+    outline: 2px solid #2F888E; }
   .mobile-menu-toggle.active {
     padding-top: calc(1em + 2px); }
+    .mobile-menu-toggle.active:focus {
+      outline: none; }
     .mobile-menu-toggle.active .menu-toggle-bar {
       background-color: #A92541;
       margin-bottom: 0; }
@@ -884,17 +872,11 @@ section.content-wrapper {
     .post-teaser .post__category {
       font-size: 0.8em; } }
 
-@media (max-width: 450px) {
-  .post-teaser .post__categories {
-    margin-bottom: 0.5em; } }
-
 .post__date {
   margin-left: 1em;
-  flex-shrink: 0;
-  color: #FB7994; }
-  @media (max-width: 450px) {
-    .post__date {
-      display: none; } }
+  flex-shrink: 1;
+  min-width: 38px;
+  text-align: center; }
   @media (max-width: 320px) {
     .post__date {
       font-size: 0.8em; } }
@@ -902,18 +884,6 @@ section.content-wrapper {
 .post__date-mobile {
   color: #FB7994;
   display: none; }
-  .post__date-mobile:before {
-    content: '';
-    width: 35px;
-    height: 35px;
-    display: block;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-right: 0.5em;
-    background-image: url("../images/svg/calendar.svg"); }
-  @media (max-width: 450px) {
-    .post__date-mobile {
-      display: inline-flex; } }
 
 form textarea,
 form input[type="text"],

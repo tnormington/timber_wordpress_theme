@@ -12,7 +12,7 @@
     }
     .post__categories {
         @include media("<=450px") {
-            margin-bottom: 0.5em;
+            // margin-bottom: 0.5em;
         }
     }
 }
@@ -20,10 +20,11 @@
 
 .post__date {
     margin-left: 1em;
-    flex-shrink: 0;
-    color: $pink;
+    flex-shrink: 1;
+    min-width: 38px;
+    text-align: center;
     @include media("<=450px") {
-        display: none;
+        // display: none;
     }
     @include media("<=phone") {
         font-size: 0.8em;
@@ -33,12 +34,12 @@
 .post__date-mobile {
     color: $pink;
     display: none;
-    &:before {
-        @include pseudo-icon(35px);
-        margin-right: 0.5em;
-        background-image: url('../images/svg/calendar.svg');
-    }
-    @include media("<=450px") {
-        display: inline-flex;
-    }
+    // &:before {
+    //     @include pseudo-icon(35px);
+    //     margin-right: 0.5em;
+    //     background-image: url('../images/svg/calendar.svg');
+    // }
+    // @include media("<=450px") {
+    //     display: inline-flex;
+    // }
 }

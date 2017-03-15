@@ -2,19 +2,20 @@
     display: inline-flex;
     align-items: center;
     font-size: 0.8em;
-    &:before {
-        @include pseudo-icon(35px);
-        margin-right: 0.5em;
-        background-image: url('../images/svg/calendar.svg');
-    }
-    &.date-right {
-        &:before {
-            display: none;
-        }
-        &:after {
-            @include pseudo-icon(35px);
-            margin-left: 0.5em;
-            background-image: url('../images/svg/calendar.svg');
-        }
-    }
+    color: $pink;
+    // &:before {
+    //     @include pseudo-icon(35px);
+    //     margin-right: 0.5em;
+    //     background-image: url('../images/svg/calendar.svg');
+    // }
+    // &.date-right {
+    //     &:before {
+    //         display: none;
+    //     }
+    //     &:after {
+    //         @include pseudo-icon(35px);
+    //         margin-left: 0.5em;
+    //         background-image: url('../images/svg/calendar.svg');
+    //     }
+    // }
 }
