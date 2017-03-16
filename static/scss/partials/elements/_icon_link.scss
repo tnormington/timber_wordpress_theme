@@ -1,0 +1,21 @@
+.icon-link {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    margin-left: 1.75em;
+    @include smart-margin(right, 10px);
+    i {
+        position: absolute;
+        left: -0.25em;
+        top: 0;
+        transform: translateX(-100%);
+        font-size: 1.5em;
+        transition: transform 0.15s ease-out;
+        color: $dark_teal;
+    }
+    &:hover {
+        i {
+            transform: translateX(-100%) scale(1.2);
+        }
+    }
+}

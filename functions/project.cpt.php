@@ -51,7 +51,7 @@ $labels = array(
 		'rest_base'             => 'projects',
 		'rest_controller_class' => 'WP_REST_Posts_Controller',
 		'rewrite'               => array(
-			'slug'                  => 'projects',
+			'slug'                  => 'project',
 			'with_front'            => false,
 		),
 	);

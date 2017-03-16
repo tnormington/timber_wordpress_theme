@@ -15,13 +15,14 @@
 
         var $mobileMenuToggle = $('#mobile-menu-toggle');
         var $mobileMenu = $('#nav-main');
+        var $headerLink = $('.hdr-logo-link');
 
         $mobileMenuToggle.on('click', function() {
             $(this).toggleClass('active');
-        $mobileMenu.toggleClass('active');
+            $mobileMenu.toggleClass('active');
+            $headerLink.toggleClass('flip');
         });
 
-        var $headerLink = $('.hdr-logo-link');
 
         // $headerLink.lettering();
 

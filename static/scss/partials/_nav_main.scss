@@ -141,15 +141,25 @@
         background-color: lighten($light_blue, 5);
         box-shadow: 0 1px 4px rgba($black, 0.35);
         transition: all 0.35s ease-out;
+        margin-left: auto;
         &.mid {
-            transition: width 0.5s ease-out;
-            width: 30px;
-            margin-left: auto;
+            // transition: width 0.5s $ease-out-expo 0.25s, transform 0.25s $ease-out-back;
+            width: 27px;
         }
         @include smart-margin(bottom, 4px);
     }
-    &:focus {
-        outline: 2px solid $teal;
+    &:focus:not(.active),
+    &:hover:not(.active),
+    &:hover:focus:not(.active) {
+        .mid {
+            width: 35px;
+        }
+        .top {
+            width: 27px;
+        }
+        .bot {
+            width: 27px;
+        }
     }
     &.active {
         padding-top: calc(1em + 2px);
@@ -157,18 +167,23 @@
             outline: none;
         }
         .menu-toggle-bar {
-            background-color: $maroon;
             // box-shadow: none;
             margin-bottom: 0;
         }
         .mid {
+            margin-left: initial;
             width: 0;
+            height: 0;
+            transform: translateX(-125%) rotateY(var(--spin-direction));
+            transition: height 0.45s $ease-out-expo 0.15s, width 0.45s $ease-out-expo 0.15s, transform 0.2s $ease-out-back;
         }
         .top {
-            transform: rotateZ(45deg) translate(3px, 3px);
+            background-color: $maroon;
+            transform: rotateZ(45deg) translate(5px, 4px);
         }
         .bot {
-            transform: rotateZ(-45deg) translate(2px,-3px);
+            background-color: $maroon;
+            transform: rotateZ(-45deg) translate(-2px, 2px);
         }
     }
     @include media("<=400px") {

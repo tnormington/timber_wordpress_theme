@@ -23,6 +23,7 @@ class StarterSite extends TimberSite {
 		add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 		add_filter( 'timber_context', array( $this, 'add_to_context' ) );
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
+		// add_filter( 'nav_menu_css_class', array( $this, 'custom_menu_item_classes') );
 		// add_filter( 'nav_menu_css_class', array( $this, 'fix_blog_menu_css_class', 10, 2 ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
@@ -30,18 +31,22 @@ class StarterSite extends TimberSite {
 		parent::__construct();
 	}
 
-	function fix_blog_menu_css_class( $classes, $item ) {
-		if ( is_singular( 'project' ) || is_post_type_archive( 'project' ) ) {
-			if ( $item->object_id == get_option('page_for_posts') ) {
-				$key = array_search( 'current_page_parent', $classes );
-				if ( false !== $key )
-					unset( $classes[ $key ] );
-			}
-		}
 
+
+	function custom_menu_item_classes($classes = array(), $menu_item = false){
+ 
+		// use this format for removing highlighting
+		if((is_singular('project') || is_post_type_archive('projects')) && $menu_item->ID == 247) {
+			$classes = array();
+		}
+		
+		// use this format for adding highlighting
+		if((is_singular('project') || is_post_type_archive('projects')) && $menu_item->ID == 241) {
+			$classes[] = 'active';
+		}
+		
 		return $classes;
 	}
-
 	
 
 
@@ -55,7 +60,7 @@ class StarterSite extends TimberSite {
 
 	function register_post_types() {
 		//this is where you can register custom post types
-		include('functions/projects.cpt.php');
+		include('functions/project.cpt.php');
 	}
 
 	function register_taxonomies() {

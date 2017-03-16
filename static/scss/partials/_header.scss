@@ -56,7 +56,8 @@
         background-color: $white;
         color: $dark_teal;
         &:focus,
-        &:active {
+        &:active,
+        &.flip {
             color: $light_blue;
             background-color: $dark_teal;
             transform: rotateY(-1turn);
