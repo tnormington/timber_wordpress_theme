@@ -85,8 +85,10 @@ section.content-wrapper {
             transform: translateX(-50%);
             left: 50%;
         }
+        &:focus {
+            color: $red;
+        }
         &:hover,
-        &:focus,
         &:hover:focus {
             color: $red;
             &:after {
