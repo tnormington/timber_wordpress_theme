@@ -1,0 +1,32 @@
+.keyword {
+    width: 45px;
+    height:  45px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-indent: -9999px;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: all 0.35s $ease-out-back;
+    &:hover {
+        transform: scale(1.1);
+    }
+    &.javascript {
+        background-image: url('../images/svg/js.svg');
+    }
+    &.react {
+        background-image: url('../images/svg/reactjs.svg');
+    }
+    &.scss {
+        background-image: url('../images/svg/sass.svg');
+    }
+    &.wordpress {
+        background-image: url('../images/svg/wordpress.svg');
+    }
+    &.drupal-8 {
+        background-image: url('../images/svg/drupal8.svg');
+    }
+    &.drupal-7 {
+        background-image: url('../images/svg/drupal7.svg');
+    }
+}

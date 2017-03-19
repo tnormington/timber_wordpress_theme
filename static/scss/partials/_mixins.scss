@@ -21,7 +21,7 @@
         color: $color;
         box-shadow: 0 0 1px rgba($black, 0.15);
     }
-    @include media("<=phone") {
+    @include media("<=550px") {
         width: 100%;
         @include smart-margin(bottom, 1em);
     }

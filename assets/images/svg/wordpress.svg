@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="191px" height="191px" viewBox="0 0 191 191" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>wordpress</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.22 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="79.7636501%" y1="7.34219012%" x2="20.8521403%" y2="92.0144388%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.5" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-3" cx="60" cy="60" r="60"></circle>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-3" y="-3" width="126" height="126">
+            <rect x="-3" y="-3" width="126" height="126" fill="white"></rect>
+            <use xlink:href="#path-3" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="wordpress">
+            <g id="Group" filter="url(#filter-1)" transform="translate(35.000000, 35.000000)">
+                <g id="bg">
+                    <use fill="#21759B" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <use fill-opacity="0.400000006" fill="url(#linearGradient-2)" fill-rule="evenodd" style="mix-blend-mode: multiply;" xlink:href="#path-3"></use>
+                    <use stroke="#FFFFFF" mask="url(#mask-4)" stroke-width="6" xlink:href="#path-3"></use>
+                </g>
+                <g id="wordpress-icon-1" transform="translate(8.000000, 8.000000)" fill-rule="nonzero" fill="#FFFFFF">
+                    <path d="M52,103.2 C23.626,103.2 0.586,80.586 0.8,52 C1.014,23.414 22.56,0.8 52,0.8 C81.442,0.8 103.2,23.84 103.2,52 C103.2,80.16 80.374,103.2 52,103.2 Z M67.146,95.306 L52.64,56.266 L38.986,96.16 C49.014,98.508 55.84,99.146 67.146,95.306 Z M31.734,93.174 L9.974,33.654 C6.986,40.054 6.348,45.388 5.92,52 C6.134,69.492 15.946,85.492 31.734,93.174 L31.734,93.174 Z M97.868,52 C98.08,40.694 92.962,31.734 92.534,30.454 C92.962,39.202 91.68,43.68 90.188,48.588 L75.254,91.468 C94.028,80.16 97.652,63.306 98.08,52 L97.868,52 Z M50.508,50.08 L43.254,30.24 L37.92,29.814 C35.788,28.32 37.066,25.974 38.56,25.974 C48.16,26.614 53.492,26.614 63.094,25.974 C65.442,25.974 66.08,29.388 63.306,29.814 L58.186,30.24 L74.824,79.306 L82.716,52.426 C83.144,40.694 79.942,39.414 75.676,30.88 C72.262,24.266 75.89,17.866 82.504,17.654 C77.168,12.534 66.29,6.134 51.996,5.92 C37.702,5.706 22.556,12.96 13.596,26.614 L29.384,26.188 C31.304,27.042 30.45,29.814 29.384,30.028 L23.838,30.454 L40.478,80.374 L50.508,50.08 L50.508,50.08 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

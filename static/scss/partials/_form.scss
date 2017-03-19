@@ -20,6 +20,12 @@ form {
         @include cta($teal);
     }
 
+    input[type='submit'] {
+        font-family: 'Quicksand', sans-serif;
+        text-transform: uppercase;
+        @include cta($teal);
+    }
+
     button[type="reset"] {
         @include cta($maroon);
     }

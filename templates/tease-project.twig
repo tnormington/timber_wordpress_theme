@@ -8,14 +8,14 @@
                 {{post.title}}
                 <span class="date project__date">{{ post.project_date|date("M d, Y") }}</span>
             </h3>
-            <div name="project__categories">
+            <div class="project__categories">
                 {% for category in post.terms('project_categories') %}
                     {% include 'category.twig' %}
                 {% endfor %}
             </div>
             <ul class="project__keywords">
                 {% for keyword in post.terms('project_keywords') %}
-                    <li class="keyword project__keyword">{{keyword}}</li>
+                    <li>{% include 'keyword.twig' %}</li>
                 {% endfor %}
             </ul>
         </div>

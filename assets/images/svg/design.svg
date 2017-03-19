@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="183px" height="183px" viewBox="0 0 183 183" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>design</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="design">
+            <g id="Group" transform="translate(14.000000, 17.000000)">
+                <path d="M44.029285,109.674822 L22.0440292,115.565754 L0.149067166,33.8526431 L81.8426876,11.9629035 L86.8903794,30.8011458 L31.8614128,73.8320471 L55.9943977,83.582406 C49.5686058,90.6619783 45.250037,99.6897609 44.029285,109.674822 Z" id="Combined-Shape" fill="#E1DB92"></path>
+                <path d="M138.251147,109.266547 L153.156304,115.288621 L137.066551,0.451045683 L45.7196678,71.8814024 L61.6236629,78.3070335 C69.7324151,71.8550172 79.9990807,68 91.1660704,68 C115.282131,68 135.199254,85.9790534 138.251147,109.266547 Z" id="Combined-Shape" fill="#FB7994"></path>
+                <ellipse id="Oval-4" fill="#2F888E" cx="91.1660704" cy="115.5" rx="40.4903399" ry="40.5"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

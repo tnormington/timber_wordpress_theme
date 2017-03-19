@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="191px" height="191px" viewBox="0 0 191 191" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>js</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.22 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="79.7636501%" y1="7.34219012%" x2="20.8521403%" y2="92.0144388%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.5" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-3" cx="60" cy="60" r="60"></circle>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-3" y="-3" width="126" height="126">
+            <rect x="-3" y="-3" width="126" height="126" fill="white"></rect>
+            <use xlink:href="#path-3" fill="black"></use>
+        </mask>
+        <path d="M80.6237572,38.3396038 C79.7232598,32.7261133 76.0627962,28.0131202 65.2217427,23.615886 C61.4560261,21.8850597 57.257603,20.6455309 56.0062624,17.7918896 C55.5618611,16.131232 55.5033873,15.1956502 55.7840618,14.1898999 C56.591001,10.9270585 60.4853601,9.90961336 63.5727798,10.8451951 C65.5608911,11.5117971 67.4437493,13.0439292 68.5781422,15.4880195 C73.8875686,12.0498736 73.8758739,12.0731462 77.5831165,9.71091918 C76.226523,7.60586025 75.5014471,6.63507723 74.6126445,5.73469675 C71.4199718,2.16779133 67.0695166,0.331712148 60.1111274,0.47204941 C58.9065659,0.624081445 57.6904265,0.787691303 56.4857481,0.939840285 C53.0125178,1.81694817 49.7027804,3.64133259 47.7614483,6.0855399 C41.9374519,12.693086 43.5981095,24.2590984 50.6851413,29.0189875 C57.6669201,34.2582453 67.923235,35.4511121 69.2330494,40.3512215 C70.5077796,46.3506394 64.8242374,48.2918546 59.1755456,47.60198 C55.0122068,46.7365669 52.696759,44.6198132 50.1939608,40.7722332 C45.5863377,43.4386412 45.5863377,43.4386412 40.8499551,46.1635231 C41.9726532,48.6194252 43.1537082,49.7304285 45.0366834,51.858877 C53.9480995,60.8989356 76.2499125,60.4545343 80.2496415,46.7716512 C80.4132513,46.3037434 81.4892873,43.1695445 80.6237572,38.3396038 L80.6237572,38.3396038 Z M34.5463561,1.19700832 L23.0387006,1.19700832 C23.0387006,11.1375644 22.9920384,21.0079519 22.9920384,30.9485079 C22.9920384,37.2753795 23.319492,43.0759864 22.2903521,44.8535917 C20.606305,48.3502115 16.2441551,47.9176219 14.2560438,47.2392082 C12.2328483,46.2451526 11.2037084,44.8300852 10.0108417,42.8303961 C9.68338805,42.2573523 9.43779784,41.812951 9.35581749,41.7778667 C6.23343035,43.6841145 3.12250409,45.6019401 0,47.5083049 C1.55552161,50.7009776 3.84757994,53.4726385 6.78296768,55.2735165 C11.1685071,57.9048401 17.0626721,58.7117794 23.2259339,57.296712 C27.2372406,56.1272348 30.6987761,53.706534 32.5114658,50.0226808 C35.1310947,45.1927401 34.5697456,39.3453541 34.5463561,32.8781453 C34.6048299,22.3294611 34.5463561,11.7807769 34.5463561,1.19700832 Z" id="path-5"></path>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-3" y="-3" width="86.9567996" height="63.5214475">
+            <rect x="-3" y="-2.5354352" width="86.9567996" height="63.5214475" fill="white"></rect>
+            <use xlink:href="#path-5" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="js">
+            <g id="Group" filter="url(#filter-1)" transform="translate(35.000000, 35.000000)">
+                <g id="bg">
+                    <use fill="#F0DB4F" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <use fill-opacity="0.400000006" fill="url(#linearGradient-2)" fill-rule="evenodd" style="mix-blend-mode: multiply;" xlink:href="#path-3"></use>
+                    <use stroke="#FFFFFF" mask="url(#mask-4)" stroke-width="6" xlink:href="#path-3"></use>
+                </g>
+                <g id="logo-javascript" transform="translate(24.000000, 40.000000)" fill-rule="nonzero">
+                    <g id="Group">
+                        <g id="Shape">
+                            <use fill="#000000" fill-rule="evenodd" xlink:href="#path-5"></use>
+                            <use stroke="#FFFFFF" mask="url(#mask-6)" stroke-width="6" xlink:href="#path-5"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
