@@ -35,3 +35,41 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+@mixin anchor {
+    color: $teal;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.25s ease-out;
+    &:after {
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: $teal;
+        content: '';
+        display: block;
+        transition: all 0.25s $ease-out-back;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+    &:focus {
+        color: $red;
+    }
+    &:hover,
+    &:hover:focus {
+        color: $red;
+        &:after {
+            background-color: $red;
+            width: 100%;
+        }
+    }
+    &.no-hover {
+        &:after {
+            display: none;
+        }
+        &:hover {
+            // color: initial;
+        }
+    }
+}

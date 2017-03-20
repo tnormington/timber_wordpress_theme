@@ -915,6 +915,9 @@ a.view-all-link {
     transform: translateY(0);
     bottom: -2em; }
 
+.project__category {
+  margin-bottom: 0; }
+
 .project__keywords {
   margin: 0;
   padding: 0; }
@@ -970,6 +973,9 @@ a.view-all-link {
 .post__date-mobile {
   color: #FB7994;
   display: none; }
+
+form:focus {
+  z-index: 150; }
 
 form textarea,
 form input[type="text"],
