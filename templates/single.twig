@@ -5,10 +5,17 @@
 		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
 			<section class="article-content">
 				<h1 class="page-title">{{post.title}}</h1>
-				<span class="date">{{ post.post_date|date('M d, Y')}}</span>
-
+				<span class="date {{post.type|lower}}__date">{{ post.post_date|date('M d, Y')}}</span>
+                <div class="post__categories">
+                    {% for category in post.terms('categories') %}
+                        {% include 'category.twig' %}
+                    {% endfor %}
+                </div>
 				<div class="hr hr-double hr-teal"></div>
 				<div class="article-body">
+                    {% if post.thumbnail %}
+                        <img class="post__featured-image" src="{{post.thumbnail.src}}">
+                    {% endif %}
 					{{post.content}}
 				</div>
 			</section>

@@ -15,14 +15,17 @@
             // margin-bottom: 0.5em;
         }
     }
+    .post__date {
+        margin-left: 1em;
+        flex-shrink: 1;
+        min-width: 38px;
+        text-align: center;
+    }
 }
 
 
 .post__date {
-    margin-left: 1em;
-    flex-shrink: 1;
-    min-width: 38px;
-    text-align: center;
+    
     @include media("<=450px") {
         // display: none;
     }
@@ -42,4 +45,24 @@
     // @include media("<=450px") {
     //     display: inline-flex;
     // }
+}
+
+.post__featured-image {
+    float: left;
+    margin-right: 1em;
+    max-width: 225px;
+}
+
+
+.single-post {
+    .post__featured-image {
+        max-width: 320px;
+    }
+    .post__categories {
+        display: flex;
+        justify-content: center;
+    }
+    .post__date {
+        margin-bottom: 1em;
+    }
 }

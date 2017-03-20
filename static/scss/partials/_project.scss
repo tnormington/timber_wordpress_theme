@@ -93,8 +93,12 @@
     background-repeat: no-repeat;
 }
 
-.project__external-link {
+.project__external-links {
     // display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -105,4 +109,5 @@
         float: left;
         width: 50%;
     }
+
 }

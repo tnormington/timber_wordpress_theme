@@ -12,5 +12,8 @@
 	</div>
 	<span class="date post__date-mobile">{{ post.post_date|date("M d, Y") }}</span>
 	<div class="hr hr-light-blue"></div>
+	{% if post.thumbnail %}
+		<img class="post__featured-image" src="{{post.thumbnail.src}}">
+	{% endif %}
 	<p>{{ post.content|length > 250 ? post.content|striptags|slice(0, 250) ~ '...' : post.content  }}</p>
 {% endblock %}
