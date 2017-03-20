@@ -23,13 +23,84 @@ class StarterSite extends TimberSite {
 		add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 		add_filter( 'timber_context', array( $this, 'add_to_context' ) );
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
+		add_filter( 'wp_check_filetype_and_ext', array($this, 'add_svg_to_allowed_filetypes'));
+		add_filter( 'upload_mimes', array($this, 'cc_mime_types') );
 		// add_filter( 'nav_menu_css_class', array( $this, 'custom_menu_item_classes') );
 		// add_filter( 'nav_menu_css_class', array( $this, 'fix_blog_menu_css_class', 10, 2 ) );
+		// add_action('nav_menu_css_class', array($this, 'add_current_nav_class') );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_resources' ) );
+		add_action( 'admin_head', array($this, 'fix_svg') );
 		parent::__construct();
 	}
+
+	// Allow SVG
+	function add_svg_to_allowed_filetypes($data, $file, $filename, $mimes) {
+
+		global $wp_version;
+		if ( $wp_version !== '4.7.1' ) {
+			return $data;
+		}
+
+		$filetype = wp_check_filetype( $filename, $mimes );
+
+		return [
+			'ext'             => $filetype['ext'],
+			'type'            => $filetype['type'],
+			'proper_filename' => $data['proper_filename']
+		];
+
+	}
+
+	function cc_mime_types( $mimes ){
+		$mimes['svg'] = 'image/svg+xml';
+		return $mimes;
+	}
+
+	function fix_svg() {
+		echo '<style type="text/css">
+				.attachment-266x266, .thumbnail img {
+					width: 100% !important;
+					height: auto !important;
+				}
+			</style>';
+	}
+
+
+	// Fix menu link highlighting
+
+
+  
+	
+	// function add_current_nav_class($classes, $item, $context) {
+		
+	// 	// Getting the current post details
+	// 	// global $post;
+		
+	// 	// Getting the post type of the current post
+	// 	// $current_post_type = get_post_type_object(get_post_type($post->ID));
+	// 	$current_post_type_slug = $context['post']->type;
+	// 	// $current_post_type_slug = $current_post_type->rewrite['slug'];
+
+	// 	// Getting the URL of the menu item
+	// 	$menu_slug = strtolower(trim($item->url));
+		
+	// 	// If the menu item URL contains the current post types slug add the current-menu-item class
+	// 	if (strpos($menu_slug,$current_post_type_slug) !== false) {
+		
+	// 	$classes[] = 'current-menu-item';
+		
+	// 	} else {
+			
+	// 		$classes = array_diff( $classes, array( 'current_page_parent' ) );
+	// 	}
+		
+	// 	// Return the corrected set of classes to be added to the menu item
+	// 	return $classes;
+
+	
+	// }
 
 
 
@@ -93,3 +164,34 @@ class StarterSite extends TimberSite {
 }
 
 new StarterSite();
+
+
+
+add_action('nav_menu_css_class', 'add_current_nav_class', 10, 2 );
+
+	function add_current_nav_class($classes, $item) {
+	
+	// Getting the current post details
+	global $post;
+	
+	// Getting the post type of the current post
+	$current_post_type = get_post_type_object(get_post_type($post->ID));
+	$current_post_type_slug = $current_post_type->rewrite['slug'];
+		
+	// Getting the URL of the menu item
+	$menu_slug = strtolower(trim($item->url));
+	
+	// If the menu item URL contains the current post types slug add the current-menu-item class
+	if (strpos($menu_slug,$current_post_type_slug) !== false) {
+	
+	   $classes[] = 'current-menu-item';
+	
+	} else {
+		
+		$classes = array_diff( $classes, array( 'current_page_parent' ) );
+	}
+	
+	// Return the corrected set of classes to be added to the menu item
+	return $classes;
+
+}
