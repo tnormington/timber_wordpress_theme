@@ -23,6 +23,7 @@
     }
     .header-svg,
     .header-svg-mobile {
+        overflow: visible;
         z-index: 1;
         position: absolute;
         pointer-events: none;

@@ -663,6 +663,7 @@ a.view-all-link {
         margin-top: 10px; } }
   .header .header-svg,
   .header .header-svg-mobile {
+    overflow: visible;
     z-index: 1;
     position: absolute;
     pointer-events: none; }
