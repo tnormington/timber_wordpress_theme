@@ -56,7 +56,7 @@
             }
         }
     }
-    @include media("<=400px") {
+    @include media("<=700px") {
         // display: none;
         position: fixed;
         width: 100vw;
@@ -187,7 +187,7 @@
             transform: rotateZ(-45deg) translate(-2px, 2px);
         }
     }
-    @include media("<=400px") {
+    @include media("<=700px") {
         display: block;
     }
 }

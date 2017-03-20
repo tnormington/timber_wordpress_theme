@@ -786,7 +786,7 @@ a.view-all-link {
         color: #DAE4E8; }
         .nav-main ul a:hover:before, .nav-main ul a:focus:before, .nav-main ul a:hover:focus:before {
           height: 100%; }
-  @media (max-width: 400px) {
+  @media (max-width: 700px) {
     .nav-main {
       position: fixed;
       width: 100vw;
@@ -883,7 +883,7 @@ a.view-all-link {
     .mobile-menu-toggle.active .bot {
       background-color: #A92541;
       transform: rotateZ(-45deg) translate(-2px, 2px); }
-  @media (max-width: 400px) {
+  @media (max-width: 700px) {
     .mobile-menu-toggle {
       display: block; } }
 
