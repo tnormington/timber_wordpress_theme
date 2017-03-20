@@ -46,7 +46,7 @@ section.content-wrapper {
 .wrapper.title-projects {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     > article {
         flex-basis: 49%;

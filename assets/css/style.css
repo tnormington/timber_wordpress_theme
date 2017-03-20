@@ -442,7 +442,7 @@ section.content-wrapper {
 .wrapper.title-projects {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap; }
   .wrapper.title-projects > article {
     flex-basis: 49%; }
@@ -641,13 +641,16 @@ a.view-all-link {
     background-image: url("../images/svg/drupal8.svg"); }
   .keyword.drupal-7 {
     background-image: url("../images/svg/drupal7.svg"); }
+  .keyword.svg {
+    background-image: url("../images/svg/svg.svg"); }
 
 .header {
   background-color: transparent;
   position: fixed;
   z-index: 10;
   flex: 0;
-  width: 100%; }
+  width: 100%;
+  top: 0; }
   .header .wrapper {
     margin-top: 2em;
     display: flex;
@@ -692,10 +695,14 @@ a.view-all-link {
     .hdr-logo-link {
       background-color: #ffffff;
       color: #184155; }
-      .hdr-logo-link:focus, .hdr-logo-link:active, .hdr-logo-link.flip {
+      .hdr-logo-link.flip {
         color: #DAE4E8;
         background-color: #184155;
-        transform: rotateY(-1turn); } }
+        transform: rotateY(-1turn); }
+        .hdr-logo-link.flip:focus, .hdr-logo-link.flip:active {
+          transform: rotateY(0turn);
+          background-color: #DAE4E8;
+          color: #184155; } }
 
 .header-svg .l-top,
 .header-svg .r-top,
@@ -881,7 +888,7 @@ a.view-all-link {
   .project-teaser .project__featured-image {
     height: 300px;
     width: 100%;
-    background-position: center -1em;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat; }
   @media (max-width: 320px) {

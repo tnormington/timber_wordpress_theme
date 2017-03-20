@@ -4,6 +4,10 @@
     z-index: 10;
     flex: 0;
     width: 100%;
+    top: 0;
+    // @include media("<=phone") {
+    //     top: 
+    // }
     .wrapper {
         // min-height: 177px;
         margin-top: 2em;
@@ -55,12 +59,16 @@
     @include media("<=700px") {
         background-color: $white;
         color: $dark_teal;
-        &:focus,
-        &:active,
         &.flip {
             color: $light_blue;
             background-color: $dark_teal;
             transform: rotateY(-1turn);
+            &:focus,
+            &:active {
+                transform: rotateY(0turn);
+                background-color: $light_blue;
+                color: $dark_teal;
+            }
         }
     }
 }
