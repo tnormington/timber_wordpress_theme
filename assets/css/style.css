@@ -427,7 +427,7 @@ body {
   background-image: linear-gradient(to top, #bbcdd4, #DAE4E8); }
 
 section.content-wrapper {
-  padding: 9em 2em 2em;
+  padding: 11em 2em 2em;
   flex: 1 0 auto;
   max-width: 900px;
   width: 100%;
