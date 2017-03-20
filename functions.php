@@ -195,3 +195,12 @@ add_action('nav_menu_css_class', 'add_current_nav_class', 10, 2 );
 	return $classes;
 
 }
+
+function default_comments_on( $data ) {
+    if( $data['post_type'] == 'project' ) {
+        $data['comment_status'] = 1;
+    }
+
+    return $data;
+}
+add_filter( 'wp_insert_post_data', 'default_comments_on' );

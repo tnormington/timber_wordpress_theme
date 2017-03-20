@@ -30,7 +30,7 @@ body {
 
 
 section.content-wrapper {
-    padding: 177px 2em 2em;
+    padding: 9em 2em 2em;
     flex: 1 0 auto;
     max-width: 900px;
     width: 100%;
@@ -82,6 +82,11 @@ section.content-wrapper {
     }
     article:not('.teaser') img {
         box-shadow: 0 2px 5px rgba($black, 0.35);
+    }
+    img {
+        @include media("<=475px") {
+            width: 100%;
+        }
     }
 } 
 

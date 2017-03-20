@@ -6,9 +6,6 @@
     .project__featured-image {
         height: 300px;
         width: 100%;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
     }
     @include media("<=phone") {
         padding: 0;
@@ -26,6 +23,9 @@
     }
     .project__date {
         font-size: 0.75em;
+        text-align: center;
+        margin-left: 1em;
+        margin-bottom: 0;
         i {
             color: $tan;
         }
@@ -65,6 +65,11 @@
     }
 }
 
+
+.project__date {
+    margin-bottom: 1em;
+}
+
 .project__category {
     margin-bottom: 0;
 }
@@ -78,6 +83,26 @@
     }
 }
 
+.project__featured-image {
+    // margin-right: 1em;
+    // margin-bottom: 1em;
+    // float: left;
+    // display: inline-block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .project__external-link {
     // display: inline-block;
+}
+
+
+.single-project {
+    .project__featured-image {
+        display: inline-block;
+        margin-right: 1em;
+        float: left;
+        width: 50%;
+    }
 }
