@@ -1,0 +1,7 @@
+{% extends "tease.twig" %}
+
+{% block content %}
+    <a class="sketchbook__link" href="{{post.link}}">
+        <img class="sketchbook__featured-image" src="{{ post.thumbnail.src('medium') }}">
+    </a>
+{% endblock %}

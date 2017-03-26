@@ -1,0 +1,11 @@
+@for $i from 1 through 6 {
+    .row-grid-span-#{$i} {
+        grid-row-end: span $i;
+    }
+}
+
+@for $i from 1 through 6 {
+    .column-grid-span-#{$i} {
+        grid-column-end: span $i;
+    }
+}

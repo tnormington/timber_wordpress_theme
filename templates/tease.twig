@@ -1,4 +1,4 @@
-<article class="teaser {{post.post_type}}-teaser card card-hover clearfix">
+<article class="teaser {{post.post_type}}-teaser card card-hover clearfix {{ post.column_grid_span ? 'column-grid-span-' ~ post.column_grid_span }} {{ post.row_grid_span ? 'row-grid-span-' ~ post.row_grid_span }}">
 	{% block content %}
 		<h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2>
 		<p>{{post.get_preview}}</p>

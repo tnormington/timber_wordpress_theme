@@ -405,6 +405,42 @@ template {
 :root {
   --spin-direction: 45deg; }
 
+.row-grid-span-1 {
+  grid-row-end: span 1; }
+
+.row-grid-span-2 {
+  grid-row-end: span 2; }
+
+.row-grid-span-3 {
+  grid-row-end: span 3; }
+
+.row-grid-span-4 {
+  grid-row-end: span 4; }
+
+.row-grid-span-5 {
+  grid-row-end: span 5; }
+
+.row-grid-span-6 {
+  grid-row-end: span 6; }
+
+.column-grid-span-1 {
+  grid-column-end: span 1; }
+
+.column-grid-span-2 {
+  grid-column-end: span 2; }
+
+.column-grid-span-3 {
+  grid-column-end: span 3; }
+
+.column-grid-span-4 {
+  grid-column-end: span 4; }
+
+.column-grid-span-5 {
+  grid-column-end: span 5; }
+
+.column-grid-span-6 {
+  grid-column-end: span 6; }
+
 *, *:before, *:after {
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
@@ -965,6 +1001,48 @@ a.view-all-link {
   margin-right: 1em;
   float: left;
   width: 50%; }
+
+.post-type-archive-sketchbook .content-wrapper .wrapper {
+  width: 100vw;
+  max-width: calc(100% + 4em);
+  margin-left: -2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  @media (max-width: 320px) {
+    .post-type-archive-sketchbook .content-wrapper .wrapper {
+      margin-left: -1em;
+      max-width: calc(100% + 2em); } }
+
+.post-type-sketchbook img {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); }
+
+.sketchbook-teaser {
+  flex-basis: 25%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: stretch; }
+  @media (max-width: 700px) {
+    .sketchbook-teaser {
+      flex-basis: 50%;
+      max-height: 120px; } }
+  .sketchbook-teaser a {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    transition: all 0.35s ease-out; }
+    .sketchbook-teaser a img {
+      width: 100%;
+      object-fit: cover;
+      position: relative;
+      transition: all 0.35s ease-out; }
+    .sketchbook-teaser a:hover img {
+      transform: scale(1.05);
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.35);
+      z-index: 10; }
+    .sketchbook-teaser a:hover:after {
+      display: none; }
 
 .footer {
   padding: 0.5em 1em;

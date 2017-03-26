@@ -1,0 +1,71 @@
+.post-type-archive-sketchbook .content-wrapper .wrapper {
+    width: 100vw;
+    max-width: calc(100% + 4em);
+    margin-left: -2em;
+
+    // OLD Flexbox fallback =================
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // ======= END Flexbox Fallback =========
+
+    // NEW Grid CSS!!! ============
+    // grid-column-gap: 1em;
+    // grid-row-gap: 1em;
+    // display: grid;
+    // grid-template-columns: repeat(6, 1fr);
+    // grid-template-rows: 12.5vh;
+    // justify-items: stretch;
+    // align-items: stretch;
+    // ==== END CSS Grid ===========
+
+    @include media("<=phone") {
+        margin-left: -1em;
+        max-width: calc(100% + 2em);
+    }
+}
+
+
+.post-type-sketchbook {
+    img {
+        box-shadow: 0 6px 20px rgba($black, 0.15);
+    }
+}
+
+.sketchbook-teaser {
+    flex-basis: 25%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: stretch;
+    @include media("<=700px") {
+        flex-basis: 50%;
+        max-height: 120px;
+    }
+    a {
+        display: flex;
+        align-items: stretch;
+        width: 100%;
+        transition: all 0.35s ease-out;
+        img {
+            width: 100%;
+            object-fit: cover;
+            position: relative;
+            transition: all 0.35s ease-out;
+        }
+        &:hover {
+            // border: 10px solid $light_blue;
+            img {
+                transform: scale(1.05);
+                box-shadow: 0 0 50px rgba($black, 0.35);
+                z-index: 10;
+            }
+        }
+        &:hover {
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
