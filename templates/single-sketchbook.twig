@@ -11,7 +11,7 @@
                         {% include 'category.twig' %}
                     {% endfor %}
                 </div>
-                <div class="hr hr-double hr-teal"></div>
+                <div class="hr hr-short-chubby hr-teal"></div>
                 <img class="sketchbook__featured-image" src="{{ post.thumbnail.src('full') }}">
                 {% if post.content %}
                     <div class="hr hr-double hr-teal"></div>
@@ -19,30 +19,8 @@
                         {{post.content}}
                     </div>
                 {% endif %}
-                <div class="hr hr-double hr-teal"></div>
+                <div class="hr hr-short-chubby hr-teal"></div>
 			</section>
-
-    		<!-- comment box -->
-            <section class="comment-box">
-                <!-- comments -->
-                <div class="comments">
-                    {% if post.comment_count %}
-                        <h3>Comments</h3>
-                        {% for cmt in post.comments %}
-                            {% include "comment.twig" with {comment:cmt} %}
-                        {% endfor %}
-                    {% else %}
-						<h3>No Comments Yet</h3>
-                    {% endif %}
-                </div>
-
-                {% if post.comment_status == "closed" %}
-					<p>Comments for this post are closed</p>
-				{% else %}
-                    <!-- comment form -->
-                    {% include "comment-form.twig" %}
-                {% endif %}
-            </section>
 		</article>
 	</div><!-- /content-wrapper -->
 {% endblock %}

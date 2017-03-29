@@ -21,17 +21,22 @@ class StarterSite extends TimberSite {
 		add_theme_support( 'post-thumbnails' );
 		add_theme_support( 'menus' );
 		add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
+
+		// Filters
 		add_filter( 'timber_context', array( $this, 'add_to_context' ) );
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
 		add_filter( 'wp_check_filetype_and_ext', array($this, 'add_svg_to_allowed_filetypes'));
 		add_filter( 'upload_mimes', array($this, 'cc_mime_types') );
-		// add_filter( 'nav_menu_css_class', array( $this, 'custom_menu_item_classes') );
-		// add_filter( 'nav_menu_css_class', array( $this, 'fix_blog_menu_css_class', 10, 2 ) );
-		// add_action('nav_menu_css_class', array($this, 'add_current_nav_class') );
+
+		// Actions
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_resources' ) );
-		add_action( 'admin_head', array($this, 'fix_svg') );
+		add_action( 'admin_head', array( $this, 'fix_svg' ) );
+
+		// Shortcodes
+		add_shortcode('hr', array( $this, 'tjn_hr_shortcode' ) );
+
 		parent::__construct();
 	}
 
@@ -111,12 +116,25 @@ class StarterSite extends TimberSite {
 		return $twig;
 	}
 
+	// Shortcodes
+
+	function tjn_hr_shortcode($attributes) {
+		extract( shortcode_atts( array(
+			'color' => 'teal',
+			'type' => 'short-chubby'
+		), $attributes, 'hr' ) );
+		$hr_format = '<div class="hr hr-%s hr-%s"></div>';
+		return sprintf($hr_format, $color, $type);
+	}
+
 }
 
 new StarterSite();
 
 
 
+// Fix the .current-menu-item class issue that plagues the WP menu
+// :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( 
 add_action('nav_menu_css_class', 'add_current_nav_class', 10, 2 );
 
 	function add_current_nav_class($classes, $item) {
@@ -146,6 +164,8 @@ add_action('nav_menu_css_class', 'add_current_nav_class', 10, 2 );
 
 }
 
+
+// turn the comments on by default for all projects i think?
 function default_comments_on( $data ) {
     if( $data['post_type'] == 'project' ) {
         $data['comment_status'] = 1;

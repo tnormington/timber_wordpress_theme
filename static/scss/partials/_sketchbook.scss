@@ -51,7 +51,7 @@
             width: 100%;
             object-fit: cover;
             position: relative;
-            transition: all 0.35s ease-out;
+            transition: all 0.45s $ease-out-back;
         }
         &:hover {
             // border: 10px solid $light_blue;

@@ -463,7 +463,7 @@ body {
   background-image: linear-gradient(to top, #bbcdd4, #DAE4E8); }
 
 section.content-wrapper {
-  padding: 11em 2em 2em;
+  padding: calc(184px + 1em) 2em 2em;
   flex: 1 0 auto;
   max-width: 900px;
   width: 100%;
@@ -550,6 +550,13 @@ section.content-wrapper {
   margin: 1em 0; }
   .hr.hr-double {
     margin: 2em 0; }
+
+.hr-short-chubby {
+  width: 75px;
+  height: 4px;
+  background-color: #bebebe;
+  display: block;
+  margin: 2em auto; }
 
 .hr-teal {
   background-color: #2F888E; }
@@ -789,7 +796,7 @@ a.view-all-link {
 .nav-main {
   flex-basis: 100%;
   margin: 0;
-  margin-top: -4px;
+  margin-top: 10px;
   text-align: center;
   z-index: 10;
   position: relative; }
@@ -1036,7 +1043,7 @@ a.view-all-link {
       width: 100%;
       object-fit: cover;
       position: relative;
-      transition: all 0.35s ease-out; }
+      transition: all 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
     .sketchbook-teaser a:hover img {
       transform: scale(1.05);
       box-shadow: 0 0 50px rgba(0, 0, 0, 0.35);

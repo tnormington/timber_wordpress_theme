@@ -7,6 +7,14 @@
     }
 }
 
+.hr-short-chubby {
+    width: 75px;
+    height: 4px;
+    background-color: $gray;
+    display: block;
+    margin: 2em auto;
+}
+
 .hr-teal {
     background-color: $teal;
 }
