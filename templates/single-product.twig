@@ -1,0 +1,43 @@
+{% extends "base.twig" %}
+
+
+{% block hero %}
+    {# <link type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
+    <link type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"> #}
+    <div class="single-product__header">
+        <h1 class="page-title page-title--cutout">{{post.title}}</h1>
+        <div class="single-product__gallery">
+            {% for id in product.gallery_image_ids %} 
+                <img src="{{ TimberImage(id).src }}">
+            {% endfor %} 
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    {#{{ function('acf_form_head') }}#}
+
+    {% do action('woocommerce_before_single_product') %}
+
+    <article itemscope itemtype="http://schema.org/Product" class="single-product-details {{post.class}}">
+
+
+
+        {#{{ function('acf_form', context.product_form_settings ) }}#}
+
+        <div class="summary entry-summary">
+            {% do action('woocommerce_single_product_summary') %}
+        </div>
+
+
+
+        {% do action('woocommerce_after_single_product_summary') %}
+
+        <meta itemprop="url" content="{{ post.link }}" />
+
+    </article>
+
+    {% do action('woocommerce_after_single_product') %}
+
+
+{% endblock  %}

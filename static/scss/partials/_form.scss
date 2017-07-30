@@ -5,7 +5,10 @@ form {
     }
     textarea,
     input[type="text"],
-    input[type="email"] {
+    input[type="email"],
+    input[type="password"],
+    input[type="file"] {
+        color: $dark_teal;
         width: 100%;
         padding: 0.5em;
         border-radius: 5px;

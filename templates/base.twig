@@ -29,6 +29,16 @@
 			{% endblock %}
 		</header>
 
+		{% if cart_count %}
+			<div class="persistant-cart">
+				<a href="/cart" class="cta cta-icon cta-icon-cart"><span class="cart-count">{{ cart_count }}</span>View Cart</a>
+			</div>
+		{% endif %}
+
+		{% block hero %}
+			
+		{% endblock %}
+
 		<section id="content" role="main" class="content-wrapper">
 			{% if title %}<h1 class="page-title">{{title}}</h1>{% endif %}
 			<div class="wrapper title-{{wp_title|lower}}">

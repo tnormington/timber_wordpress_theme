@@ -4,4 +4,7 @@
     text-align: center;
     background-color: $dark_teal;
     color: $light_blue;
+    @media (max-width: 700px) {
+        padding-bottom: 4em;
+    }
 }

@@ -1,0 +1,94 @@
+.product-steps {
+    display: none;
+}
+
+.product-steps__step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    min-height: 80px;
+    font-size: 1.5em;
+    border-radius: 50%;
+    background-color: $faded_teal;
+    color: $bright_teal;
+}
+
+.product-steps-track {
+    width: 10px;
+    background-color: $faded_teal;
+    height: 100%;
+}
+
+.single-product .cart {
+    .wccpf_fields_table {
+        display: flex;
+        align-items: flex-start;
+        display: none;
+        opacity: 0;
+        transition: all 0.35s ease-out;
+        tbody {
+            width: 100%;
+        }
+        td {
+            vertical-align: top;
+        }
+        td,
+        label {
+            width: 100%;
+        }
+        label {
+            margin-bottom: 1em;
+        }
+        tr {
+            display: flex;
+            flex-direction: column;
+        }
+        &:before {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            min-width: 50px;
+            min-height: 50px;
+            font-size: 1.5em;
+            border-radius: 50%;
+            background-color: $faded_teal;
+            color: $bright_teal;
+            content: '';
+            position: relative;
+            margin-right: 1em;
+            transition: all 0.25s ease-out;
+        }
+        &.portrait-wrapper:before {
+            content: '1';
+            // background-color: $red;
+            // color: $white;
+            // box-shadow: 0 0 15px rgba($pink, 1);
+        }
+        &.background-color-wrapper:before {
+            content: '2';
+        }
+        &.special-requests-wrapper:before {
+            content: '3';
+        }
+        &.valid,
+        &.active {
+            display: flex;
+            opacity: 1;
+        }
+        &.active:before {
+            background-color: $red;
+            color: $white;
+            box-shadow: 0 0 15px rgba($pink, 1);
+        }
+        &:hover {
+            &:before {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

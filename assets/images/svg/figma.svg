@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="191px" height="191px" viewBox="0 0 191 191" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>figma</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-31.7%" y="-23.3%" width="163.3%" height="163.3%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.22 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="79.7636501%" y1="7.34219012%" x2="20.8521403%" y2="92.0144388%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.5" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-3" cx="60" cy="60" r="60"></circle>
+    </defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="figma">
+            <g filter="url(#filter-1)" transform="translate(35.000000, 35.000000)">
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <g id="Mask">
+                    <use fill="#2E3038" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <use fill-opacity="0.400000006" fill="url(#linearGradient-2)" fill-rule="evenodd" style="mix-blend-mode: multiply;" xlink:href="#path-3"></use>
+                    <circle stroke="#FFFFFF" stroke-width="3" cx="60" cy="60" r="61.5"></circle>
+                </g>
+                <g id="Group" mask="url(#mask-4)">
+                    <g transform="translate(30.000000, 15.000000)">
+                        <circle id="Oval-2" fill="#1ABCFE" cx="45" cy="45" r="15"></circle>
+                        <path d="M30,0 L45,0 C53.2842712,0 60,6.71390727 60,15 L60,15 C60,23.2842712 53.2860927,30 45,30 L30,30 L30,0 Z" id="Rectangle" fill="#FF7262"></path>
+                        <path d="M0,0 L15,0 C23.2842712,0 30,6.71390727 30,15 L30,15 C30,23.2842712 23.2860927,30 15,30 L0,30 L0,0 Z" id="Rectangle-Copy-24" fill="#F24E1E" transform="translate(15.000000, 15.000000) scale(-1, 1) translate(-15.000000, -15.000000) "></path>
+                        <path d="M0,30 L15,30 C23.2842712,30 30,36.7139073 30,45 L30,45 C30,53.2842712 23.2860927,60 15,60 L0,60 L0,30 Z" id="Rectangle-Copy-25" fill="#A259FF" transform="translate(15.000000, 45.000000) scale(-1, 1) translate(-15.000000, -45.000000) "></path>
+                        <path d="M0,60 L15,60 C23.2842712,60 30,66.7139073 30,75 L30,75 C30,83.2842712 23.2860927,90 15,90 L15,90 C6.71572875,90 0,83.2860927 0,75 L0,60 Z" id="Rectangle-Copy-26" fill="#0ACF83" transform="translate(15.000000, 75.000000) scale(-1, 1) translate(-15.000000, -75.000000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

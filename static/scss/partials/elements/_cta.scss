@@ -1,0 +1,34 @@
+.cta {
+    @include cta($red);
+}
+
+.cta.cta-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:before {
+        content: '';
+        display: block;
+        width: 25px;
+        height: 25px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 1em;
+        transition: all 0.15s ease-out;
+    }
+    &:hover {
+        &:before {
+            transform: scale(1.1);
+        }
+    }
+    &.cta-icon-cart {
+        &:before {
+            background-image: url('../images/svg/cart_light.svg');
+        }
+        &:hover {
+            &:before {
+                background-image: url('../images/svg/cart_red.svg');
+            }
+        }
+    }
+}

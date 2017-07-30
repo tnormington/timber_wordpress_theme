@@ -1,0 +1,142 @@
+.woocommerce {
+    button.button.alt {
+        margin-top: 1em;
+        background-color: $faded_teal;
+        color: $bright_teal;
+        box-shadow: 0 1px 5px rgba($black, 0.2);
+        &:disabled[disabled] {
+            cursor: not-allowed;
+            background-color: $faded_teal;
+            color: $bright_teal;
+            &:hover {
+                color: $bright_teal;
+                background-color: $faded_teal;
+            }
+        }
+        &:hover {
+            background-color: $faded_teal;
+            color: $bright_teal;
+        }
+        &.active {
+            background-color: $pink;
+            color: $white;
+            &:hover {
+                background-color: $red;
+                box-shadow: 0 1px 1px rgba($black, 0.2);
+            }
+        }
+    }
+}
+
+
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+.woocommerce input.button.alt {
+    background-color: $pink;
+    box-shadow: 0 1px 5px rgba($black, 0.2);
+    transition: all 0.15s ease-out;
+    &:hover {
+        box-shadow: 0 1px 1px rgba($black, 0.2);
+        background-color: $red;
+    }
+}
+
+
+.woocommerce a.remove {
+    color: $red !important;
+    &:hover {
+        background-color: $red !important;    
+    }
+}
+
+
+.woocommerce-checkout #payment .payment_method_paypal img {
+    width: auto;
+}
+
+#add_payment_method #payment,
+.woocommerce-cart #payment,
+.woocommerce-checkout #payment,
+.woocommerce table.shop_table {
+    background-color: $off_teal;
+    box-shadow: 0 2px 16px rgba($black, 0.2);
+}
+
+.woocommerce-cart #payment div.payment_box,
+.woocommerce-checkout #payment div.payment_box {
+    background-color: white;
+    &:before {
+        border-bottom-color: white;
+    }
+}
+
+.woocommerce td.product-name dl.variation dt,
+.woocommerce td.product-name .wc-item-meta .wc-item-meta-label {
+    float: none;
+    font-size: 0.75em;
+    margin-top: 2em;
+    color: $red;
+    text-transform: uppercase;
+    font-weight: 100;
+    &:first-child {
+        margin-top: 0.5em;
+    }
+}
+
+.woocommerce td.product-name .wc-item-meta {
+    padding: 0;
+    p {
+        margin-top: 0.5em;
+    }
+}
+
+.woocommerce td.product-name dl.variation p {
+    margin-top: 0.5em;
+}
+
+.woocommerce ul.order_details {
+    padding: 0;
+    margin-bottom: 1em;
+    text-align: center;
+    li {
+        display: inline-block;
+        margin-bottom: 1em;
+        float: none;
+        color: black;
+    }
+}
+
+.woocommerce-thankyou-order-received,
+.woocommerce-order-details__title {
+    text-align: center;
+}
+
+.woocommerce table.shop_table tr,
+.woocommerce table.cart tr {
+    td:last-child,
+    th:last-child,
+    tfoot td {
+        width: 100px;
+        text-align: right;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+    .product-name {
+        width: 100%;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        .variation-UploadaSelfPortrait img {
+            max-width: 300px;
+            width: 100%;
+        }
+    }
+    .product-price {
+        text-align: right;
+    }
+    .product-quantity,
+    .product-subtotal,
+    .product-thumbnail {
+        display: none;
+    }
+}

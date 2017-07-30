@@ -1,0 +1,14 @@
+.icon {
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.icon-cart {
+    background-image: url('../images/svg/cart.svg');
+    &.icon-on-dark {
+        background-image: url('../images/svg/cart_light.svg');
+    }
+}

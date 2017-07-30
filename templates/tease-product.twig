@@ -1,0 +1,19 @@
+<article {{ fn('post_class', ['$classes', 'entry'] ) }}>
+
+    {{ fn('timber_set_product', post)}}
+
+    <div class="product__inner" style="background-image: url('{{TimberImage(post.background_image).src}}');">
+        <div class="product__content">
+             {# {% do action('woocommerce_before_shop_loop_item_title') %}  #}
+            <h3 class="product__title">{{ post.title }}</h3>
+            {% do action( 'woocommerce_after_shop_loop_item_title' ) %}
+            {{ post.post_excerpt }}
+            {% do action( 'woocommerce_after_shop_loop_item' ) %}
+            <div class="textright">
+                <a class="product__read-more" href="{{post.link}}">Read More</a>
+            </div>
+        </div>
+
+    </div>
+
+</article>

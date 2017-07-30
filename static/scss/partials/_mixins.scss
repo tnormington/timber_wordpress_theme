@@ -16,6 +16,7 @@
     box-shadow: 0 2px 4px rgba($black, 0.25);
     font-weight: bold;
     cursor: pointer;
+    text-decoration: none;
     &:hover {
         background-color: transparent;
         color: $color;
@@ -42,32 +43,33 @@
     font-weight: bold;
     position: relative;
     transition: color 0.25s ease-out;
-    &:after {
-        position: absolute;
-        width: 0;
-        height: 2px;
-        background-color: $teal;
-        content: '';
-        display: block;
-        transition: all 0.25s $ease-out-back;
-        transform: translateX(-50%);
-        left: 50%;
-    }
+    word-break: break-word;
+    // &:after {
+    //     position: absolute;
+    //     width: 0;
+    //     height: 2px;
+    //     background-color: $teal;
+    //     content: '';
+    //     display: block;
+    //     transition: all 0.25s $ease-out-back;
+    //     transform: translateX(-50%);
+    //     left: 50%;
+    // }
     &:focus {
         color: $red;
     }
     &:hover,
     &:hover:focus {
         color: $red;
-        &:after {
-            background-color: $red;
-            width: 100%;
-        }
+        // &:after {
+        //     background-color: $red;
+        //     width: 100%;
+        // }
     }
     &.no-hover {
-        &:after {
-            display: none;
-        }
+        // &:after {
+        //     display: none;
+        // }
         &:hover {
             // color: initial;
         }

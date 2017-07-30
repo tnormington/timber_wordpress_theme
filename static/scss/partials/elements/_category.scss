@@ -37,4 +37,15 @@
             background-image: url('../images/svg/designed.svg');
         }
     }
+    &.sketch {
+        &:before {
+            background-image: url('../images/svg/sketch.svg');
+        }
+    }
+    &.figma {
+        &:before {
+            background-image: url('../images/svg/figma.svg');
+        }
+    }
 }
+

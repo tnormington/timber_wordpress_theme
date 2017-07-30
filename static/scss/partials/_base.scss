@@ -15,7 +15,8 @@ img {
 }
 
 :focus {
-    outline: $red;
+    outline-color: $red;
+    // box-shadow: 0 0 3px rgba($red, 0.75);
 }
 
 // Layout
@@ -25,7 +26,12 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-color: $light_blue;
-    background-image: linear-gradient(to top, darken($light_blue, 10), $light_blue);
+    // background-image: linear-gradient(to top, darken($light_blue, 10), $light_blue);
+}
+
+.container {
+    max-width: $container_size;
+    margin: 0 auto;
 }
 
 
@@ -61,6 +67,16 @@ section.content-wrapper {
 
 
 // Content element styles
+
+::selection {
+  background: $pink;
+  color: $white;
+}
+::-moz-selection {
+  background: $pink;
+  color: $white;
+}
+
 .content-wrapper {
     h1,h2,h3,h4,h5,h6 {
         color: $dark_teal;
@@ -79,6 +95,9 @@ section.content-wrapper {
         border: 1px solid $gray;
         border-radius: 5px;
         overflow-y: scroll;
+    }
+    table {
+        table-layout: auto;
     }
     article:not('.teaser') img {
         box-shadow: 0 2px 5px rgba($black, 0.35);

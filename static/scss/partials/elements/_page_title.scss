@@ -14,3 +14,15 @@
         transform: translate(-50%, 2px);
     }
 }
+
+.page-title--cutout {
+    background-color: $white;
+    box-shadow: 0 5px 30px rgba($black, 0.2);
+    display: block;
+    margin: 0 auto;
+    padding: 0.5em 1em;
+    max-width: 690px;
+    &:after {
+        display: none;
+    }
+}

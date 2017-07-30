@@ -1,0 +1,9 @@
+
+.woocommerce form {
+    @media (max-width: 500px) {
+        .form-row-last,
+        .form-row-first {
+            width: 100%;
+        }
+    }
+}

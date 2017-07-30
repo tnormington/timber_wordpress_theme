@@ -5,9 +5,6 @@
     flex: 0;
     width: 100%;
     top: 0;
-    // @include media("<=phone") {
-    //     top: 
-    // }
     .wrapper {
         // min-height: 177px;
         margin-top: 2em;
@@ -54,6 +51,20 @@
     padding: 0.095em 0.15em 0.05em;
     box-shadow: 0 2px 6px rgba($black, 0.35);
     text-shadow: -3px 0 0 rgba($teal, 1);
+    &:after {
+        position: absolute;
+        background-image: url('../images/svg/home_dark.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 35px;
+        height: 35px;
+        content: '';
+        display: block;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 100%;
+        margin-left: 10px;
+    }
     &:focus,
     &:active {
         color: $dark_teal;

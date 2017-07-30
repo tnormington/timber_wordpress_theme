@@ -12,11 +12,23 @@
 					{% endfor %}
 				</div>
 				<div class="hr hr-teal"></div>
-				<img class="project__featured-image" src="{{post.thumbnail.src}}">
+				{% if post.thumbnail %}
+					<img class="project__featured-image" src="{{post.thumbnail.src}}">
+				{% endif %}
 				<div class="article-body">
 					{{post.content}}
+					
 				</div>
 			</section>
+			{% if post.comparison_photo %}
+				<section class="comparison-photos">
+					{% for img in post.get_field('comparison_photo') %}
+						{% filter shortcodes %}
+							[image-comparator left="{{img.left_photo}}" right="{{img.right_photo}}" classes="hover"]
+						{% endfilter %}
+					{% endfor %}
+				</section>
+			{% endif %}
 
 			<div class="hr hr-teal"></div>
     		<!-- comment box -->

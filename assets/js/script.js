@@ -24,46 +24,89 @@
         });
 
 
-        // $headerLink.lettering();
+        var $vectorPortraitProductSteps = $('.post-323 .wccpf_fields_table');
+        var $vectorPortraitAddToCart = $('.post-323 [type=submit]');
 
-        // var $headerLinkLetters = $headerLink.find('span');
+        // console.log($vectorPortraitAddToCart);
 
-        // var headerLinkLetters = [];
+        $vectorPortraitAddToCart.prop('disabled', true);
 
-        // headerLinkLetters['the'] = $headerLink.find('.char1').nextUntil('.char4').andSelf();
+        // Give first step active class
+        $vectorPortraitProductSteps.first().addClass('active');
 
-        // headerLinkLetters['timnormington'] = $headerLink.find('.char3').nextUntil();
 
-        // headerLinkLetters['the'].wrapAll('<div></div>');
-        // headerLinkLetters['timnormington'].wrapAll('<div></div>');
+        var $stepOne = $vectorPortraitProductSteps.first();
+        var $stepOneInput = $stepOne.find('input');
 
-        // $headerLinkLetters.on('mouseenter touchmove', function() {
-        //     var $letter = $(this);
-        //     $letter.addClass('flip');
-        //     window.setTimeout(function() {
-        //         $letter.removeClass('flip');
-        //     }, 1000);
+        // Loop through each product step and setup event handlers with closure
+        for(var i = 0; i < $vectorPortraitProductSteps.length; i++) {
+            (function(i) {
+                $($vectorPortraitProductSteps[i]).find('input, textarea').on('change', function() {
+                    if($(this).val().length) {
+                        progressProductSteps(i);
+                        // If this is step 2, light up the submit button
+                        if(i >= 0) {
+                            $vectorPortraitAddToCart.addClass('active').prop('disabled', false);
+                        }
+                    }
+                });
+            })(i);
+        }
+        
+
+        // $stepOneInput.on
+
+        // $vectorPortraitProductSteps.last().on('change', function() {
         // });
 
-        // $headerLink.on('mouseenter touchmove', function() {
-        //     $(this).addClass('flip');
-        //     // window.setTimeout(function() {
-        //     //     $letter.removeClass('flip');
-        //     // }, 1000);
-        // });
 
-        // console.log(window.sessionStorage.getItem('flipped'));
 
-        // if(window.sessionStorage.getItem('flipped')) {
-        //     $headerLink.addClass('flip');
-        // }
+        function progressProductSteps(i) {
+            // Using the index of the current step, remove the active class,
+            // and then add active to the next step
+            $($vectorPortraitProductSteps[i]).removeClass('active').addClass('valid').next().addClass('active');
+        }
 
-        // $headerLink.on('click', function() {
-        //     console.log(window.sessionStorage.getItem('flipped'));
-        //     $(this).toggleClass('flip');
-        //     window.sessionStorage.setItem('flipped', !window.sessionStorage.getItem('flipped'));
-        // });
 
+        // SINGLE PRODUCT SLIDER
+        var $productGallery = $('.single-product__gallery');
+
+        $productGallery.slick({
+            infinite: true,
+            speed: 2000,
+            autoplay: true,
+            dots: false,
+            arrows: false,
+            autoplaySpeed: 0,
+            slidesToShow: 8,
+            cssEase: 'linear',
+            slidesToScroll: 1,
+            pauseOnFocus: false,
+            pauseOnHover: false,
+            responsive: [
+                {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 6,
+                }
+                },
+                {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 4,
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
 
 
     });

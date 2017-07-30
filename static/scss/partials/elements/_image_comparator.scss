@@ -1,0 +1,44 @@
+.image-comparator .noUi-horizontal .noUi-handle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $red;
+    background-image: linear-gradient(to top, $maroon, $pink);
+    box-shadow: 0 1px 3px rgba($black, 0.35);
+    top: -9px;
+    left: -15px;
+    transition: all 0.15s ease-out;
+    border: none;
+    position: relative;
+    &:after,
+    &:before {
+        content: '';
+        display: block;
+        height: 15px;
+        width: 2px;
+        border-radius: 1px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $pink;
+    }
+    &:before {
+        // left: calc(33% - 0px);
+        left: 33%;
+    }
+    &:after {
+        // left: calc(66% - 0px);
+        left: 66%;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: 0 2px 5px rgba($black, 0.45);
+        background-color: $pink;
+        transform: scale(1.1);
+    }
+}
+
+.image-comparator .slider {
+    margin-top: 20px;
+}

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="191" height="191" viewBox="0 0 191 191">
+  <defs>
+    <filter id="sketch-a" width="163.3%" height="163.3%" x="-31.7%" y="-23.3%" filterUnits="objectBoundingBox">
+      <feOffset dy="10" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"/>
+      <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.22 0"/>
+      <feMerge>
+        <feMergeNode in="shadowMatrixOuter1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="sketch-c" x1="79.764%" x2="20.852%" y1="7.342%" y2="92.014%">
+      <stop offset="0%" stop-color="#FFF" stop-opacity=".5"/>
+      <stop offset="100%" stop-opacity=".5"/>
+    </linearGradient>
+    <circle id="sketch-b" cx="60" cy="60" r="60"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd" filter="url(#sketch-a)" transform="translate(35 35)">
+    <use fill="#FFF" xlink:href="#sketch-b"/>
+    <use fill="url(#sketch-c)" fill-opacity=".4" style="mix-blend-mode:multiply" xlink:href="#sketch-b"/>
+    <circle cx="60" cy="60" r="61.5" stroke="#FFF" stroke-width="3"/>
+    <g fill-rule="nonzero" transform="translate(9 21)">
+      <polygon fill="#FFAE00" points="51 0 102 59.062 79.907 88.902 51 91.989 22.093 88.902 0 59.062" transform="rotate(-180 51 45.995)"/>
+      <polygon fill="#EC6C00" points="51 0 102 59.062 0 59.062" transform="rotate(-180 51 45.995)"/>
+      <polygon fill="#FFAE00" points="30.352 0 60.704 59.062 0 59.062" transform="rotate(-180 40.676 45.995)"/>
+      <polygon fill="#FFEFB4" points="30.352 32.927 60.704 0 0 0" transform="rotate(-180 40.676 16.463)"/>
+      <polygon fill="#FFAE00" points="0 29.84 11.356 14.817 22.093 0 1.239 0" transform="rotate(-180 11.047 16.463)"/>
+      <polygon fill="#FFAE00" points="0 29.84 11.356 14.817 22.093 0 1.239 0" transform="matrix(1 0 0 -1 79.907 32.927)"/>
+      <polygon fill="#FED305" points="28.907 29.84 30.352 0 0 32.927" transform="rotate(-180 25.5 16.463)"/>
+      <polygon fill="#FED305" points="28.907 29.84 30.352 0 0 32.927" transform="matrix(1 0 0 -1 51 32.927)"/>
+    </g>
+  </g>
+</svg>

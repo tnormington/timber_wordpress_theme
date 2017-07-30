@@ -1,0 +1,45 @@
+// .postid-336 {
+//     .project__featured-image {
+//         display: none;       
+//     }
+//     .article-body {
+//         display: flex;
+//         flex-wrap: wrap;
+//         justify-content: center;
+//     }
+//     .image-comparator {
+//         flex-basis: 25%;
+//         width: 25%;
+//         padding: 0;
+//         // @include media ('')
+//         @include media('<=600px') {
+//             flex-basis: 100%;
+//             width: 100%;
+//         }
+//     }
+//     section.content-wrapper {
+//         max-width: 1400px;
+//     }
+// }
+
+
+.comparison-photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .image-comparator {
+        flex-basis: 25%;
+        width: 25%;
+        padding: 0 0.5em 1em;
+        // @include media ('')
+        @include media('<=600px') {
+            flex-basis: 100%;
+            width: 100%;
+            padding: 0 0 1em;
+        }
+        .left,
+        .right {
+            transition: width 0.15s ease-out;
+        }
+    }
+}

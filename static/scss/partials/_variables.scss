@@ -1,14 +1,21 @@
 // Colors
 
+$dark_blue:      #5A79B1;
 $dark_teal:      #184155;
 $tan:            #E1DB92;
 $light_blue:     #DAE4E8;
+$faded_blue:     #F0FAFA;
 $blue:           darken($light_blue, 4);
 $teal:           #2F888E;
 $light_teal:     #D0FCFF;
+$off_teal:       #F0F9FA;
+$faded_teal:     #D7EFF1;
+$bright_teal:    #75DBE2;
 $pink:           #FB7994;
 $red:            #E14A69;
 $maroon:         #A92541;
+
+$green:          #68BB63;
 
 $offwhite:       rgb(98%, 98%, 98%);
 $white:          #ffffff;
@@ -19,3 +26,8 @@ $gray:           rgb(74.5%, 74.5%, 74.5%);
 
 $ease_out_expo:   cubic-bezier(0.190, 1.000, 0.220, 1.000);
 $ease_out_back:   cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
+
+// Container
+
+$container_size: 900px;
