@@ -453,7 +453,7 @@ img {
   height: auto; }
 
 :focus {
-  outline-color: #E14A69; }
+  outline: none; }
 
 body {
   display: flex;

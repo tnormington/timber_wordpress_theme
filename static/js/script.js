@@ -2,15 +2,14 @@
     $(document).ready(function() {
 
         var $headerSvg = $('#header-svg');
-
         var $headerSvgMobile = $('#header-svg-mobile');
 
-        console.log($headerSvg);
-        if($headerSvg[0].clientHeight) {
-            var parallaxHeader = new Parallax($headerSvg[0]);
-        } else {
-            var parallaxHeader = new Parallax($headerSvgMobile[0]);
-        }
+        // console.log($headerSvg);
+        // if($headerSvg[0].clientHeight) {
+        //     var parallaxHeader = new Parallax($headerSvg[0]);
+        // } else {
+        //     var parallaxHeader = new Parallax($headerSvgMobile[0]);
+        // }
 
 
         var $mobileMenuToggle = $('#mobile-menu-toggle');

@@ -15,7 +15,8 @@ img {
 }
 
 :focus {
-    outline-color: $red;
+    // outline-color: $red;
+    outline: none;
     // box-shadow: 0 0 3px rgba($red, 0.75);
 }
 

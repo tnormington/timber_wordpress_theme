@@ -267,10 +267,10 @@ function woo_remove_product_tabs( $tabs ) {
 }
 
 
-function add_product_steps() {
-	// echo file_get_contents( get_stylesheet_directory_uri() . '/inc/product_steps.php' );
-	echo '<div class="product-steps-track"></div>';
-}
+// function add_product_steps() {
+// 	// echo file_get_contents( get_stylesheet_directory_uri() . '/inc/product_steps.php' );
+// 	echo '<div class="product-steps-track"></div>';
+// }
 
 // add_action('wccpf/before/fields/start', 'add_product_steps');
 
@@ -278,7 +278,6 @@ function add_product_steps() {
 function add_product_results() {
 	include(__DIR__ . '/inc/product_results.php' );
 }
-
 
 add_action( 'wccpf/after/fields/end', 'add_product_results');
 
@@ -291,6 +290,7 @@ function hide_coupon_field_on_cart( $enabled ) {
 	return $enabled;
 }
 add_filter( 'woocommerce_coupons_enabled', 'hide_coupon_field_on_cart' );
+
 // hide coupon field on checkout page
 function hide_coupon_field_on_checkout( $enabled ) {
 	if ( is_checkout() ) {
