@@ -226,9 +226,17 @@ function custom_override_checkout_fields( $fields ) {
 
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
 
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+// remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
 
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+
+
+// Add product price schema
+function tjn_woocommerce_get_price_html( $price, $instance ) { 
+    // make filter magic happen here... 
+    return '<span itemProp="price">'.$price.'</span>';
+}; 
+add_filter( 'woocommerce_get_price_html', 'tjn_woocommerce_get_price_html', 10, 2 ); 
 
 
 // Remove image thumbnail on archive page
