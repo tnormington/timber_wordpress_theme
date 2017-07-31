@@ -1500,7 +1500,7 @@ form button[type="reset"] {
   .product-results img {
     width: 100%; }
   .product-results ul {
-    margin: 0; }
+    margin: 0 0 1em; }
 
 .product-steps {
   display: none; }
