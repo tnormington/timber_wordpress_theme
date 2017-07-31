@@ -1473,21 +1473,22 @@ form button[type="reset"] {
 
 .single-product__product-content {
   margin: 2em 0; }
-  .single-product__product-content .price {
-    text-align: center; }
-    .single-product__product-content .price .woocommerce-Price-amount {
-      padding: 1em;
-      margin: 1em auto;
-      background-color: #68BB63;
-      background-image: linear-gradient(to top, #2DB824 0%, #6BF060 100%);
-      color: #ffffff;
-      font-size: 1.5em;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
-      box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.25);
-      max-width: 150px;
-      border-radius: 100px;
-      text-align: center;
-      display: inline-block; }
+
+.single-product-details .price {
+  text-align: center; }
+  .single-product-details .price .woocommerce-Price-amount {
+    padding: 1em;
+    margin: 1em auto;
+    background-color: #68BB63;
+    background-image: linear-gradient(to top, #2DB824 0%, #6BF060 100%);
+    color: #ffffff;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.25);
+    max-width: 150px;
+    border-radius: 100px;
+    text-align: center;
+    display: inline-block; }
 
 .single-product__social-icons {
   display: flex;
