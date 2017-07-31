@@ -1657,6 +1657,7 @@ form button[type="reset"] {
 .woocommerce input.button.alt {
   background-color: #FB7994;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
   transition: all 0.15s ease-out; }
   .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover,
   .woocommerce input.button.alt:hover {
@@ -1667,6 +1668,9 @@ form button[type="reset"] {
   color: #E14A69 !important; }
   .woocommerce a.remove:hover {
     background-color: #E14A69 !important; }
+
+.woocommerce form .form-row .required {
+  text-decoration: none; }
 
 .woocommerce-checkout #payment .payment_method_paypal img {
   width: auto; }
@@ -1759,6 +1763,15 @@ form button[type="reset"] {
 .woocommerce table.cart tr .product-subtotal,
 .woocommerce table.cart tr .product-thumbnail {
   display: none; }
+
+.woocommerce-message,
+.woocommerce-error {
+  background-color: #F0F9FA;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px; }
+
+.woocommerce-error {
+  margin-top: 1em; }
 
 .icon {
   width: 35px;
