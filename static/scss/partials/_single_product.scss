@@ -11,6 +11,7 @@
         flex-wrap: wrap;
         .wccpf-fields-group-1 {
             margin-right: 1em;
+            flex: 1 0 auto;
         }
         // button[type="submit"] {
         //     margin-top: 1em;
@@ -30,16 +31,8 @@
 
 .single-product__header {
     padding: 200px 0 0;
-    // width: calc(100% + 4em);
     width: 100vw;
-    // margin-left: -2em;
-    // background-image: radial-gradient(50% 221%, rgba(178,235,255,0.96) 81%, #616E9D 100%);
     background: #b3ecff;
-    // background: -moz-radial-gradient(center, ellipse cover, #b3ecff 0%, #616e9d 100%);
-    // background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #b3ecff), color-stop(100%, #616e9d));
-    // background: -webkit-radial-gradient(center, ellipse cover, #b3ecff 0%, #616e9d 100%);
-    // background: -o-radial-gradient(center, ellipse cover, #b3ecff 0%, #616e9d 100%);
-    // background: -ms-radial-gradient(center, ellipse cover, #b3ecff 0%, #616e9d 100%);
     background: radial-gradient(ellipse at bottom, #b3ecff 0%, #616e9d 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3ecff', endColorstr='#616e9d', GradientType=1 );
     position: relative;
@@ -135,12 +128,14 @@ $bright_green: #6BF060;
 
 .product-results {
     background-color: $faded_blue;
-    flex: 1 0 0;
+    flex: 1 0 300px;
     border-radius: 15px;
     padding: 1em;
     img {
         width: 100%;
-        
+    }
+    ul {
+        margin: 0;
     }
 }
 
