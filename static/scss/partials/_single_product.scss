@@ -151,4 +151,9 @@ $bright_green: #6BF060;
     }
 }
 
+
+.single-product__thumbnail {
+    display: none;
+}
+
 @import "elements/product_steps";

@@ -1515,6 +1515,9 @@ form button[type="reset"] {
     .product-results {
       flex: 1 0 100%; } }
 
+.single-product__thumbnail {
+  display: none; }
+
 .product-steps {
   display: none; }
 
