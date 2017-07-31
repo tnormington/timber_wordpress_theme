@@ -20,6 +20,11 @@ form {
         }
     }
 
+    input[type="file"] {
+        background-color: $faded_blue;
+        border: none;
+    }
+
     button {
         font-family: 'Quicksand', sans-serif;
         text-transform: uppercase;
